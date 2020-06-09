@@ -1,0 +1,11 @@
+version: "3"
+services:
+  app:
+    command: "tail -f /dev/null"
+    image: "node:14"
+    ports:
+      - "4200:4200"
+      - "9876:9876"
+    volumes:
+      - "./:/app"
+    working_dir: "/app"

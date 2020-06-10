@@ -4,6 +4,7 @@ import { RouterModule } from "@angular/router";
 
 import { AppComponent } from "./components/app/app.component";
 import { LayoutMainComponent } from './components/layout-main/layout-main.component';
+import { PageAlgorithmComponent } from './components/page-algorithm/page-algorithm.component';
 
 @NgModule({
   bootstrap: [
@@ -12,6 +13,7 @@ import { LayoutMainComponent } from './components/layout-main/layout-main.compon
   declarations: [
     AppComponent,
     LayoutMainComponent,
+    PageAlgorithmComponent,
   ],
   imports: [
     BrowserModule,

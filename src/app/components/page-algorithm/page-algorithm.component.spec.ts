@@ -1,16 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PageAlgorithmComponent } from './page-algorithm.component';
+import { PageAlgorithmComponent } from "./page-algorithm.component";
 
-describe('PageAlgorithmComponent', () => {
+describe("PageAlgorithmComponent", () => {
+
   let component: PageAlgorithmComponent;
   let fixture: ComponentFixture<PageAlgorithmComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PageAlgorithmComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        PageAlgorithmComponent,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +21,8 @@ describe('PageAlgorithmComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
+
 });

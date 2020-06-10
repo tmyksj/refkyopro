@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-page-algorithm',
-  templateUrl: './page-algorithm.component.html',
-  styleUrls: ['./page-algorithm.component.scss']
+  selector: "app-page-algorithm",
+  styleUrls: ["./page-algorithm.component.scss"],
+  templateUrl: "./page-algorithm.component.html",
 })
 export class PageAlgorithmComponent implements OnInit {
 
-  constructor() { }
+  public constructor() {
+  }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }

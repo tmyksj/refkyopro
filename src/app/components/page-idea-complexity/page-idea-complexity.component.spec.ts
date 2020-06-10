@@ -1,16 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PageIdeaComplexityComponent } from './page-idea-complexity.component';
+import { PageIdeaComplexityComponent } from "./page-idea-complexity.component";
 
-describe('PageIdeaComplexityComponent', () => {
+describe("PageIdeaComplexityComponent", () => {
+
   let component: PageIdeaComplexityComponent;
   let fixture: ComponentFixture<PageIdeaComplexityComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PageIdeaComplexityComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        PageIdeaComplexityComponent,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +21,8 @@ describe('PageIdeaComplexityComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
+
 });

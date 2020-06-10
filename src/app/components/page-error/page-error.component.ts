@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-page-error',
-  templateUrl: './page-error.component.html',
-  styleUrls: ['./page-error.component.scss']
+  selector: "app-page-error",
+  styleUrls: ["./page-error.component.scss"],
+  templateUrl: "./page-error.component.html",
 })
 export class PageErrorComponent implements OnInit {
 
-  constructor() { }
+  public constructor() {
+  }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }

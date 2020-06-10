@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-page-idea',
-  templateUrl: './page-idea.component.html',
-  styleUrls: ['./page-idea.component.scss']
+  selector: "app-page-idea",
+  styleUrls: ["./page-idea.component.scss"],
+  templateUrl: "./page-idea.component.html",
 })
 export class PageIdeaComponent implements OnInit {
 
-  constructor() { }
+  public constructor() {
+  }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }

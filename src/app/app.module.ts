@@ -10,6 +10,7 @@ import { PageIdeaComponent } from "./components/page-idea/page-idea.component";
 import { PageIdeaAlgorithmComponent } from "./components/page-idea-algorithm/page-idea-algorithm.component";
 import { PageIdeaComplexityComponent } from "./components/page-idea-complexity/page-idea-complexity.component";
 import { PageLibraryComponent } from "./components/page-library/page-library.component";
+import { PageHomeComponent } from './components/page-home/page-home.component';
 
 @NgModule({
   bootstrap: [
@@ -24,6 +25,7 @@ import { PageLibraryComponent } from "./components/page-library/page-library.com
     PageIdeaAlgorithmComponent,
     PageIdeaComplexityComponent,
     PageLibraryComponent,
+    PageHomeComponent,
   ],
   imports: [
     BrowserModule,

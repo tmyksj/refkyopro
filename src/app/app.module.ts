@@ -7,6 +7,7 @@ import { LayoutMainComponent } from './components/layout-main/layout-main.compon
 import { PageAlgorithmComponent } from './components/page-algorithm/page-algorithm.component';
 import { PageErrorComponent } from './components/page-error/page-error.component';
 import { PageIdeaComponent } from './components/page-idea/page-idea.component';
+import { PageIdeaAlgorithmComponent } from './components/page-idea-algorithm/page-idea-algorithm.component';
 
 @NgModule({
   bootstrap: [
@@ -18,6 +19,7 @@ import { PageIdeaComponent } from './components/page-idea/page-idea.component';
     PageAlgorithmComponent,
     PageErrorComponent,
     PageIdeaComponent,
+    PageIdeaAlgorithmComponent,
   ],
   imports: [
     BrowserModule,

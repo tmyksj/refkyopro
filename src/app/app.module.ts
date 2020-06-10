@@ -3,6 +3,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
 
 import { AppComponent } from "./components/app/app.component";
+import { LayoutMainComponent } from './components/layout-main/layout-main.component';
 
 @NgModule({
   bootstrap: [
@@ -10,6 +11,7 @@ import { AppComponent } from "./components/app/app.component";
   ],
   declarations: [
     AppComponent,
+    LayoutMainComponent,
   ],
   imports: [
     BrowserModule,

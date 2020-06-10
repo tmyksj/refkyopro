@@ -30,6 +30,7 @@ import { PageLibraryComponent } from "./components/page-library/page-library.com
   imports: [
     BrowserModule,
     RouterModule.forRoot([
+      { path: "", component: PageHomeComponent },
       { path: "algorithm/:key", component: PageAlgorithmComponent },
       { path: "idea", component: PageIdeaComponent },
       { path: "idea/algorithm", component: PageIdeaAlgorithmComponent },

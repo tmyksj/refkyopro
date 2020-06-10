@@ -28,6 +28,12 @@ import { PageLibraryComponent } from "./components/page-library/page-library.com
   imports: [
     BrowserModule,
     RouterModule.forRoot([
+      { path: "algorithm/:key", component: PageAlgorithmComponent },
+      { path: "idea", component: PageIdeaComponent },
+      { path: "idea/algorithm", component: PageIdeaAlgorithmComponent },
+      { path: "idea/complexity", component: PageIdeaComplexityComponent },
+      { path: "library/:key/:lang", component: PageLibraryComponent },
+      { path: "**", component: PageErrorComponent },
     ]),
   ],
   providers: [

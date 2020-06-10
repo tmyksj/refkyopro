@@ -3,14 +3,16 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { PageHomeComponent } from './page-home.component';
 
 describe('PageHomeComponent', () => {
+
   let component: PageHomeComponent;
   let fixture: ComponentFixture<PageHomeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PageHomeComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        PageHomeComponent,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -22,4 +24,5 @@ describe('PageHomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });

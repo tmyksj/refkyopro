@@ -6,11 +6,11 @@ import { AppComponent } from "./components/app/app.component";
 import { LayoutMainComponent } from "./components/layout-main/layout-main.component";
 import { PageAlgorithmComponent } from "./components/page-algorithm/page-algorithm.component";
 import { PageErrorComponent } from "./components/page-error/page-error.component";
+import { PageHomeComponent } from './components/page-home/page-home.component';
 import { PageIdeaComponent } from "./components/page-idea/page-idea.component";
 import { PageIdeaAlgorithmComponent } from "./components/page-idea-algorithm/page-idea-algorithm.component";
 import { PageIdeaComplexityComponent } from "./components/page-idea-complexity/page-idea-complexity.component";
 import { PageLibraryComponent } from "./components/page-library/page-library.component";
-import { PageHomeComponent } from './components/page-home/page-home.component';
 
 @NgModule({
   bootstrap: [
@@ -21,11 +21,11 @@ import { PageHomeComponent } from './components/page-home/page-home.component';
     LayoutMainComponent,
     PageAlgorithmComponent,
     PageErrorComponent,
+    PageHomeComponent,
     PageIdeaComponent,
     PageIdeaAlgorithmComponent,
     PageIdeaComplexityComponent,
     PageLibraryComponent,
-    PageHomeComponent,
   ],
   imports: [
     BrowserModule,

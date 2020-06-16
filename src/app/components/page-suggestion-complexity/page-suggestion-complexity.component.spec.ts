@@ -1,22 +1,22 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PageIdeaComplexityComponent } from "./page-idea-complexity.component";
+import { PageSuggestionComplexityComponent } from "./page-suggestion-complexity.component";
 
-describe("PageIdeaComplexityComponent", () => {
+describe("PageSuggestionComplexityComponent", () => {
 
-  let component: PageIdeaComplexityComponent;
-  let fixture: ComponentFixture<PageIdeaComplexityComponent>;
+  let component: PageSuggestionComplexityComponent;
+  let fixture: ComponentFixture<PageSuggestionComplexityComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        PageIdeaComplexityComponent,
+        PageSuggestionComplexityComponent,
       ],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PageIdeaComplexityComponent);
+    fixture = TestBed.createComponent(PageSuggestionComplexityComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

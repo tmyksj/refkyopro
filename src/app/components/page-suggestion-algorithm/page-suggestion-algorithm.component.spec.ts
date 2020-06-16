@@ -1,22 +1,22 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PageIdeaComponent } from "./page-idea.component";
+import { PageSuggestionAlgorithmComponent } from "./page-suggestion-algorithm.component";
 
-describe("PageIdeaComponent", () => {
+describe("PageSuggestionAlgorithmComponent", () => {
 
-  let component: PageIdeaComponent;
-  let fixture: ComponentFixture<PageIdeaComponent>;
+  let component: PageSuggestionAlgorithmComponent;
+  let fixture: ComponentFixture<PageSuggestionAlgorithmComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        PageIdeaComponent,
+        PageSuggestionAlgorithmComponent,
       ],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PageIdeaComponent);
+    fixture = TestBed.createComponent(PageSuggestionAlgorithmComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

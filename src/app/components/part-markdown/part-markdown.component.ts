@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
+import * as marked from "marked";
 
 @Component({
   selector: "app-part-markdown",
@@ -7,10 +8,18 @@ import { Component, OnInit } from "@angular/core";
 })
 export class PartMarkdownComponent implements OnInit {
 
+  @Input()
+  public content: string;
+
   public constructor() {
+    this.content = "";
   }
 
   public ngOnInit(): void {
+  }
+
+  public parsedContent(): string {
+    return marked(this.content);
   }
 
 }

@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-part-markdown',
-  templateUrl: './part-markdown.component.html',
-  styleUrls: ['./part-markdown.component.scss']
+  selector: "app-part-markdown",
+  styleUrls: ["./part-markdown.component.scss"],
+  templateUrl: "./part-markdown.component.html",
 })
 export class PartMarkdownComponent implements OnInit {
 
-  constructor() { }
+  public constructor() {
+  }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }

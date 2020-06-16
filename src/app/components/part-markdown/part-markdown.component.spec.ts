@@ -1,16 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PartMarkdownComponent } from './part-markdown.component';
+import { PartMarkdownComponent } from "./part-markdown.component";
 
-describe('PartMarkdownComponent', () => {
+describe("PartMarkdownComponent", () => {
+
   let component: PartMarkdownComponent;
   let fixture: ComponentFixture<PartMarkdownComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PartMarkdownComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        PartMarkdownComponent,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +21,8 @@ describe('PartMarkdownComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
+
 });

@@ -2,10 +2,10 @@ import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-page-idea",
-  styleUrls: ["./page-idea.component.scss"],
-  templateUrl: "./page-idea.component.html",
+  styleUrls: ["./page-suggestion.component.scss"],
+  templateUrl: "./page-suggestion.component.html",
 })
-export class PageIdeaComponent implements OnInit {
+export class PageSuggestionComponent implements OnInit {
 
   public constructor() {
   }

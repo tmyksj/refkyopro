@@ -7,10 +7,10 @@ import { LayoutMainComponent } from "./components/layout-main/layout-main.compon
 import { PageAlgorithmComponent } from "./components/page-algorithm/page-algorithm.component";
 import { PageErrorComponent } from "./components/page-error/page-error.component";
 import { PageHomeComponent } from "./components/page-home/page-home.component";
-import { PageIdeaComponent } from "./components/page-idea/page-idea.component";
-import { PageIdeaAlgorithmComponent } from "./components/page-idea-algorithm/page-idea-algorithm.component";
-import { PageIdeaComplexityComponent } from "./components/page-idea-complexity/page-idea-complexity.component";
 import { PageLibraryComponent } from "./components/page-library/page-library.component";
+import { PageSuggestionComponent } from "./components/page-suggestion/page-suggestion.component";
+import { PageSuggestionAlgorithmComponent } from "./components/page-suggestion-algorithm/page-suggestion-algorithm.component";
+import { PageSuggestionComplexityComponent } from "./components/page-suggestion-complexity/page-suggestion-complexity.component";
 import { PartMarkdownComponent } from "./components/part-markdown/part-markdown.component";
 
 @NgModule({
@@ -23,10 +23,10 @@ import { PartMarkdownComponent } from "./components/part-markdown/part-markdown.
     PageAlgorithmComponent,
     PageErrorComponent,
     PageHomeComponent,
-    PageIdeaComponent,
-    PageIdeaAlgorithmComponent,
-    PageIdeaComplexityComponent,
     PageLibraryComponent,
+    PageSuggestionComponent,
+    PageSuggestionAlgorithmComponent,
+    PageSuggestionComplexityComponent,
     PartMarkdownComponent,
   ],
   imports: [
@@ -34,10 +34,10 @@ import { PartMarkdownComponent } from "./components/part-markdown/part-markdown.
     RouterModule.forRoot([
       { path: "", component: PageHomeComponent },
       { path: "algorithm/:key", component: PageAlgorithmComponent },
-      { path: "idea", component: PageIdeaComponent },
-      { path: "idea/algorithm", component: PageIdeaAlgorithmComponent },
-      { path: "idea/complexity", component: PageIdeaComplexityComponent },
       { path: "library/:key/:lang", component: PageLibraryComponent },
+      { path: "suggestion", component: PageSuggestionComponent },
+      { path: "suggestion/algorithm", component: PageSuggestionAlgorithmComponent },
+      { path: "suggestion/complexity", component: PageSuggestionComplexityComponent },
       { path: "**", component: PageErrorComponent },
     ]),
   ],

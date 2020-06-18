@@ -11,6 +11,7 @@ import { PageLibraryComponent } from "./components/page-library/page-library.com
 import { PageSuggestionComponent } from "./components/page-suggestion/page-suggestion.component";
 import { PageSuggestionAlgorithmComponent } from "./components/page-suggestion-algorithm/page-suggestion-algorithm.component";
 import { PageSuggestionComplexityComponent } from "./components/page-suggestion-complexity/page-suggestion-complexity.component";
+import { PartMarkdownComponent } from "./components/part-markdown/part-markdown.component";
 
 @NgModule({
   bootstrap: [
@@ -26,6 +27,7 @@ import { PageSuggestionComplexityComponent } from "./components/page-suggestion-
     PageSuggestionComponent,
     PageSuggestionAlgorithmComponent,
     PageSuggestionComplexityComponent,
+    PartMarkdownComponent,
   ],
   imports: [
     BrowserModule,

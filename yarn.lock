@@ -6481,6 +6481,11 @@ prepend-http@^1.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
 
+primeng@^9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/primeng/-/primeng-9.1.0.tgz#3d790f7d05b500ec77edf84899b6ef6ffb863c64"
+  integrity sha512-EeW+WA7uT4/7UBJ23Gfb4x8MaTdFpeV9XxAy68K/XIoeTmZ2hNJrdVdfF63y6k7nxwA/mOrkIMshY0eM8nMzoQ==
+
 private@^0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"

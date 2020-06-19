@@ -6481,6 +6481,11 @@ prepend-http@^1.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
 
+primeflex@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/primeflex/-/primeflex-1.3.0.tgz#bed1509d553d3d95fecaac0f0a81756d0aaf2f2d"
+  integrity sha512-LzczuuZavOjPaNnTe2t04FkEJfAwlKhGESNkwj3xyDGZkd7k1g+9L70ADuChJTDSJ5TyPyV7CPGXkW0b+8jYnA==
+
 primeicons@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/primeicons/-/primeicons-4.0.0.tgz#a3594b3af213dcf8c4c3d6fc99eea05b7c92f57c"

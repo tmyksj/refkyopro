@@ -5,7 +5,7 @@ import { LibraryDomain } from "./library.domain";
 
 describe("LibraryDomain", () => {
 
-  let service: LibraryDomain;
+  let domain: LibraryDomain;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -14,11 +14,11 @@ describe("LibraryDomain", () => {
       ],
     });
 
-    service = TestBed.inject(LibraryDomain);
+    domain = TestBed.inject(LibraryDomain);
   });
 
   it("should be created", () => {
-    expect(service).toBeTruthy();
+    expect(domain).toBeTruthy();
   });
 
 });

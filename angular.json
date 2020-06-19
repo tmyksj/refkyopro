@@ -31,9 +31,15 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/prismjs/themes/prism-coy.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-clike.js",
+              "node_modules/prismjs/components/prism-c.js",
+              "node_modules/prismjs/components/prism-cpp.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -95,9 +101,15 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/prismjs/themes/prism-coy.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-clike.js",
+              "node_modules/prismjs/components/prism-c.js",
+              "node_modules/prismjs/components/prism-cpp.js"
+            ]
           }
         },
         "lint": {

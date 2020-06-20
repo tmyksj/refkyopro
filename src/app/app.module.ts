@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
+import { TabMenuModule } from "primeng/tabmenu";
 
 import { AppComponent } from "./components/app/app.component";
 import { LayoutMainComponent } from "./components/layout-main/layout-main.component";
@@ -40,6 +41,7 @@ import { PartMarkdownComponent } from "./components/part-markdown/part-markdown.
       { path: "suggestion/complexity", component: PageSuggestionComplexityComponent },
       { path: "**", component: PageErrorComponent },
     ]),
+    TabMenuModule,
   ],
   providers: [
   ],

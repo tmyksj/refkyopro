@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
+import { CardModule } from "primeng/card";
 import { TabMenuModule } from "primeng/tabmenu";
 
 import { AppComponent } from "./components/app/app.component";
@@ -43,6 +44,7 @@ import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/p
       { path: "suggestion/complexity", component: PageSuggestionComplexityComponent },
       { path: "**", component: PageErrorComponent },
     ]),
+    CardModule,
     TabMenuModule,
   ],
   providers: [

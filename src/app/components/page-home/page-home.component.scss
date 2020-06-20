@@ -3,7 +3,30 @@ app-part-visual-dijkstra {
   left: 50%;
   position: fixed;
   top: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-25%) translateY(-50%);
   width: 2000px;
   z-index: -1;
+}
+
+p-card {
+  margin: 0 1rem 1rem 0;
+}
+
+.contents {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.ui-card-title {
+  align-items: center;
+  display: flex;
+
+  i {
+    margin-right: 1rem;
+  }
+}
+
+.wrapper {
+  margin: 2rem;
 }

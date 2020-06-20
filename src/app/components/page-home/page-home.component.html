@@ -1,5 +1,40 @@
 <app-layout-main>
-  <p>page-home works!</p>
+  <div class="wrapper">
+    <h1>Refkyopro</h1>
+    <p>競技プログラミング関連の情報をまとめました。</p>
+
+    <h2>コンテンツ</h2>
+    <div class="contents">
+      <p-card [style]="{ maxWidth: '25rem' }">
+        <div class="ui-card-title">
+          <i class="pi pi-sort-amount-up"></i>
+          <span>Algorithm</span>
+        </div>
+        <div>
+          競技プログラミングに使える典型的なアルゴリズムをまとめました。
+        </div>
+      </p-card>
+      <p-card [style]="{ maxWidth: '25rem' }">
+        <div class="ui-card-title">
+          <i class="pi pi-tags"></i>
+          <span>Library</span>
+        </div>
+        <div>
+          競技プログラミングに使えるライブラリをまとめました。組み合わせや素集合データ構造など。
+        </div>
+      </p-card>
+      <p-card [style]="{ maxWidth: '25rem' }">
+        <div class="ui-card-title">
+          <i class="pi pi-compass"></i>
+          <span>Suggestion</span>
+        </div>
+        <div>
+          解放が思いつかないときに。いろいろなアルゴリズムをリストアップしてくれます。
+        </div>
+      </p-card>
+    </div>
+  </div>
+
   <app-part-visual-dijkstra height="2000"
                             width="2000"></app-part-visual-dijkstra>
 </app-layout-main>

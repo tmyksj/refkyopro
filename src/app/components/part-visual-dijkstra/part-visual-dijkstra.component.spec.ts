@@ -1,16 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PartVisualDijkstraComponent } from './part-visual-dijkstra.component';
+import { PartVisualDijkstraComponent } from "./part-visual-dijkstra.component";
 
-describe('PartVisualDijkstraComponent', () => {
+describe("PartVisualDijkstraComponent", () => {
+
   let component: PartVisualDijkstraComponent;
   let fixture: ComponentFixture<PartVisualDijkstraComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PartVisualDijkstraComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        PartVisualDijkstraComponent,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +21,8 @@ describe('PartVisualDijkstraComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
+
 });

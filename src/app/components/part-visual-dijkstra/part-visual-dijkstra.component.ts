@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-part-visual-dijkstra',
-  templateUrl: './part-visual-dijkstra.component.html',
-  styleUrls: ['./part-visual-dijkstra.component.scss']
+  selector: "app-part-visual-dijkstra",
+  styleUrls: ["./part-visual-dijkstra.component.scss"],
+  templateUrl: "./part-visual-dijkstra.component.html",
 })
 export class PartVisualDijkstraComponent implements OnInit {
 
-  constructor() { }
+  public constructor() {
+  }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }

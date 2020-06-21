@@ -1,0 +1,18 @@
+circle {
+  fill: #fafafa;
+  stroke: #3e2723;
+  transition: fill 0.1s ease-in-out;
+
+  &.fixed {
+    fill: #e1f5fe;
+  }
+}
+
+line {
+  stroke: #d7ccc8;
+  transition: stroke 0.1s ease-in-out;
+
+  &.used {
+    stroke: #3e2723;
+  }
+}

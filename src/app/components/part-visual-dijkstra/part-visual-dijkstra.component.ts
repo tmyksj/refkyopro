@@ -31,22 +31,6 @@ export class PartVisualDijkstraComponent implements OnInit {
     this.width = 2000;
   }
 
-  public circleFill(node: NodeDatum): string {
-    return node.fixed ? "#e1f5fe" : "#fafafa";
-  }
-
-  public circleR(): number {
-    return Math.min(this.width, this.height) / 100;
-  }
-
-  public lineStroke(link: LinkDatum): string {
-    return link.used ? "#3e2723" : "#d7ccc8";
-  }
-
-  public lineStrokeWidth(link: LinkDatum): number {
-    return link.used ? 1.1 : 1;
-  }
-
   public ngOnInit(): void {
     this.initializeGraph();
     this.startDijkstra();
@@ -71,6 +55,7 @@ export class PartVisualDijkstraComponent implements OnInit {
         distance: i === 0 ? 0 : Infinity,
         fixed: false,
         index: i,
+        r: Math.min(this.width, this.height) / 100,
       };
     });
 
@@ -165,5 +150,7 @@ interface NodeDatum extends SimulationNodeDatum {
   distance?: number;
 
   fixed?: boolean;
+
+  r?: number;
 
 }

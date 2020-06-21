@@ -123,7 +123,7 @@ export class PartVisualDijkstraComponent implements OnInit {
       setTimeout(loop, this.interval);
     };
 
-    loop()
+    loop();
   }
 
   private startForceSimulation(): void {

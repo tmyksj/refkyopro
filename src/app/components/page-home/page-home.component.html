@@ -8,33 +8,28 @@
       <p-card [style]="{ maxWidth: '25rem' }">
         <div class="ui-card-title">
           <i class="pi pi-sort-amount-up"></i>
-          <span>Algorithm</span>
+          <a routerLink="/algorithm">Algorithm</a>
         </div>
-        <div>
-          競技プログラミングに使える典型的なアルゴリズムをまとめました。
-        </div>
+        <div>競技プログラミングに使える典型的なアルゴリズムをまとめました。</div>
       </p-card>
       <p-card [style]="{ maxWidth: '25rem' }">
         <div class="ui-card-title">
           <i class="pi pi-tags"></i>
-          <span>Library</span>
+          <a routerLink="/library">Library</a>
         </div>
-        <div>
-          競技プログラミングに使えるライブラリをまとめました。組み合わせや素集合データ構造など。
-        </div>
+        <div>競技プログラミングに使えるライブラリをまとめました。組み合わせや素集合データ構造など。</div>
       </p-card>
       <p-card [style]="{ maxWidth: '25rem' }">
         <div class="ui-card-title">
           <i class="pi pi-compass"></i>
-          <span>Suggestion</span>
+          <a routerLink="/suggestion">Suggestion</a>
         </div>
-        <div>
-          解放が思いつかないときに。いろいろなアルゴリズムをリストアップしてくれます。
-        </div>
+        <div>解放が思いつかないときに。いろいろなアルゴリズムをリストアップしてくれます。</div>
       </p-card>
     </div>
   </div>
 
+  <div class="visual-wrapper"></div>
   <app-part-visual-dijkstra height="2000"
                             width="2000"></app-part-visual-dijkstra>
 </app-layout-main>

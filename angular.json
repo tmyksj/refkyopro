@@ -31,6 +31,10 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/nova-dark/theme.css",
+              "node_modules/primeng/resources/primeng.css",
               "node_modules/prismjs/themes/prism-coy.css",
               "src/styles.scss"
             ],
@@ -101,6 +105,10 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/nova-dark/theme.css",
+              "node_modules/primeng/resources/primeng.css",
               "node_modules/prismjs/themes/prism-coy.css",
               "src/styles.scss"
             ],

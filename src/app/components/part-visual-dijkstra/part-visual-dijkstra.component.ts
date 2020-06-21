@@ -11,6 +11,9 @@ export class PartVisualDijkstraComponent implements OnInit {
   @Input()
   public height: number;
 
+  @Input()
+  public interval: number;
+
   public linkList: LinkDatum[];
 
   public nodeList: NodeDatum[];
@@ -23,18 +26,13 @@ export class PartVisualDijkstraComponent implements OnInit {
 
   public constructor() {
     this.height = 2000;
+    this.interval = 250;
     this.size = 30;
     this.width = 2000;
   }
 
   public circleFill(node: NodeDatum): string {
-    if (node.fixed) {
-      return "#e1f5fe";
-    } else if (node.distance < Infinity) {
-      return "#fff3e0";
-    } else {
-      return "#fafafa";
-    }
+    return node.fixed ? "#e1f5fe" : "#fafafa";
   }
 
   public circleR(): number {
@@ -104,7 +102,11 @@ export class PartVisualDijkstraComponent implements OnInit {
     const set: Set<[number, number, LinkDatum]> = new Set<[number, number, LinkDatum]>();
     set.add([0, 0, null]);
 
-    const intervalId: number = window.setInterval(() => {
+    const loop: () => void = (): void => {
+      if (set.size === 0) {
+        return;
+      }
+
       let s: [number, number, LinkDatum] = [Infinity, -1, null];
       set.forEach((value: [number, number, LinkDatum]): void => {
         if (s[0] > value[0]) {
@@ -112,11 +114,18 @@ export class PartVisualDijkstraComponent implements OnInit {
         }
       });
 
-      if (s[0] === this.nodeList[s[1]].distance) {
-        this.nodeList[s[1]].fixed = true;
-        if (s[2] !== null) {
-          s[2].used = true;
-        }
+      if (set.has(s)) {
+        set.delete(s);
+      }
+
+      if (s[0] !== this.nodeList[s[1]].distance) {
+        setTimeout(loop, 0);
+        return;
+      }
+
+      this.nodeList[s[1]].fixed = true;
+      if (s[2] !== null) {
+        s[2].used = true;
       }
 
       graph[s[1]].forEach((value: LinkDatum, key: number): void => {
@@ -126,11 +135,10 @@ export class PartVisualDijkstraComponent implements OnInit {
         }
       });
 
-      set.delete(s);
-      if (set.size === 0) {
-        clearInterval(intervalId);
-      }
-    }, 250);
+      setTimeout(loop, this.interval);
+    };
+
+    loop()
   }
 
   private startForceSimulation(): void {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { MenuItem } from "primeng/api";
 
 @Component({
   selector: "app-layout-main",
@@ -7,10 +8,37 @@ import { Component, OnInit } from "@angular/core";
 })
 export class LayoutMainComponent implements OnInit {
 
+  public menuItemList: MenuItem[];
+
   public constructor() {
   }
 
   public ngOnInit(): void {
+    this.menuItemList = [
+      {
+        icon: "pi pi-fw pi-home",
+        label: "Refkyopro",
+        routerLink: ["/"],
+        routerLinkActiveOptions: {
+          exact: true,
+        },
+      },
+      {
+        icon: "pi pi-fw pi-sort-amount-up",
+        label: "Algorithm",
+        routerLink: ["/algorithm"],
+      },
+      {
+        icon: "pi pi-fw pi-tags",
+        label: "Library",
+        routerLink: ["/library"],
+      },
+      {
+        icon: "pi pi-fw pi-compass",
+        label: "Suggestion",
+        routerLink: ["/suggestion"],
+      },
+    ];
   }
 
 }

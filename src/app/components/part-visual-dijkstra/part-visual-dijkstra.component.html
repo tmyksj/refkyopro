@@ -1,7 +1,9 @@
 <svg [attr.viewBox]="'0 0 ' + width + ' ' + height"
      xmlns="http://www.w3.org/2000/svg">
-  <g stroke="#d7ccc8">
+  <g>
     <line *ngFor="let link of linkList"
+          [attr.stroke]="lineStroke(link)"
+          [attr.stroke-width]="lineStrokeWidth(link)"
           [attr.x1]="link.source.x"
           [attr.x2]="link.target.x"
           [attr.y1]="link.source.y"
@@ -11,8 +13,8 @@
     <circle *ngFor="let node of nodeList"
             [attr.cx]="node.x"
             [attr.cy]="node.y"
-            [attr.r]="r()"
-            fill="#fafafa"
+            [attr.fill]="circleFill(node)"
+            [attr.r]="circleR()"
             stroke="#3e2723"></circle>
   </g>
 </svg>

@@ -21,24 +21,42 @@ export class PartVisualDijkstraComponent implements OnInit {
   @Input()
   public width: number;
 
-  private graph: Map<number, number>[];
-
   public constructor() {
     this.height = 2000;
     this.size = 30;
     this.width = 2000;
   }
 
+  public circleFill(node: NodeDatum): string {
+    if (node.fixed) {
+      return "#e1f5fe";
+    } else if (node.distance < Infinity) {
+      return "#fff3e0";
+    } else {
+      return "#fafafa";
+    }
+  }
+
+  public circleR(): number {
+    return Math.min(this.width, this.height) / 100;
+  }
+
+  public lineStroke(link: LinkDatum): string {
+    return link.used ? "#3e2723" : "#d7ccc8";
+  }
+
+  public lineStrokeWidth(link: LinkDatum): number {
+    return link.used ? 1.1 : 1;
+  }
+
   public ngOnInit(): void {
-    this.loopInitializeGraph();
+    this.initializeGraph();
+    this.startDijkstra();
+    this.startForceSimulation();
   }
 
-  public r(): number {
-    return Math.min(this.width, this.height) / 80;
-  }
-
-  private loopInitializeGraph(): void {
-    this.graph = new Array(this.size).fill(null).map(() => {
+  private initializeGraph(): void {
+    const graph: Map<number, number>[] = new Array(this.size).fill(null).map(() => {
       return new Map<number, number>();
     });
 
@@ -46,30 +64,76 @@ export class PartVisualDijkstraComponent implements OnInit {
       const src: number = Math.floor(this.size * Math.random());
       const dst: number = Math.floor(this.size * Math.random());
       if (src !== dst) {
-        this.graph[src].set(dst, Math.floor(this.size * Math.random()));
+        graph[src].set(dst, Math.floor(this.size * Math.random()));
       }
     }
 
     this.nodeList = new Array(this.size).fill(null).map((_: any, i: number): NodeDatum => {
       return {
         distance: i === 0 ? 0 : Infinity,
+        fixed: false,
         index: i,
       };
     });
 
-    this.linkList = this.graph.map((value: Map<number, number>, index: number): LinkDatum[] => {
+    this.linkList = graph.map((value: Map<number, number>, index: number): LinkDatum[] => {
       return Array.from(value.entries()).map((v: [number, number], i: number): LinkDatum => {
         return {
           cost: v[1],
           index: i,
           source: this.nodeList[index],
           target: this.nodeList[v[0]],
+          used: false,
         };
       });
     }).reduce((previousValue: LinkDatum[], currentValue: LinkDatum[]): LinkDatum[] => {
       return previousValue.concat(currentValue);
     }, []);
+  }
 
+  private startDijkstra(): void {
+    const graph: Map<number, LinkDatum>[] = new Array(this.size).fill(null).map(() => {
+      return new Map<number, LinkDatum>();
+    });
+
+    this.linkList.forEach((value: LinkDatum): void => {
+      graph[(value.source as NodeDatum).index].set((value.target as NodeDatum).index, value);
+      graph[(value.target as NodeDatum).index].set((value.source as NodeDatum).index, value);
+    });
+
+    const set: Set<[number, number, LinkDatum]> = new Set<[number, number, LinkDatum]>();
+    set.add([0, 0, null]);
+
+    const intervalId: number = window.setInterval(() => {
+      let s: [number, number, LinkDatum] = [Infinity, -1, null];
+      set.forEach((value: [number, number, LinkDatum]): void => {
+        if (s[0] > value[0]) {
+          s = value;
+        }
+      });
+
+      if (s[0] === this.nodeList[s[1]].distance) {
+        this.nodeList[s[1]].fixed = true;
+        if (s[2] !== null) {
+          s[2].used = true;
+        }
+      }
+
+      graph[s[1]].forEach((value: LinkDatum, key: number): void => {
+        if (this.nodeList[key].distance > this.nodeList[s[1]].distance + value.cost) {
+          this.nodeList[key].distance = this.nodeList[s[1]].distance + value.cost;
+          set.add([this.nodeList[key].distance, key, value]);
+        }
+      });
+
+      set.delete(s);
+      if (set.size === 0) {
+        clearInterval(intervalId);
+      }
+    }, 250);
+  }
+
+  private startForceSimulation(): void {
     forceSimulation<NodeDatum, LinkDatum>(this.nodeList)
       .force("center", forceCenter(this.width / 2, this.height / 2))
       .force("charge", forceManyBody().strength(-Math.min(this.width, this.height)))
@@ -84,10 +148,14 @@ interface LinkDatum extends SimulationLinkDatum<NodeDatum>{
 
   cost?: number;
 
+  used?: boolean;
+
 }
 
 interface NodeDatum extends SimulationNodeDatum {
 
   distance?: number;
+
+  fixed?: boolean;
 
 }

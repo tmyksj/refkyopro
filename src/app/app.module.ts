@@ -16,6 +16,7 @@ import { PageSuggestionAlgorithmComponent } from "./components/page-suggestion-a
 import { PageSuggestionComplexityComponent } from "./components/page-suggestion-complexity/page-suggestion-complexity.component";
 import { PartMarkdownComponent } from "./components/part-markdown/part-markdown.component";
 import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/part-visual-dijkstra.component";
+import { PartCardContentComponent } from './components/part-card-content/part-card-content.component';
 
 @NgModule({
   bootstrap: [
@@ -33,6 +34,7 @@ import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/p
     PageSuggestionComplexityComponent,
     PartMarkdownComponent,
     PartVisualDijkstraComponent,
+    PartCardContentComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-part-card-content",
@@ -6,6 +6,15 @@ import { Component, OnInit } from "@angular/core";
   templateUrl: "./part-card-content.component.html",
 })
 export class PartCardContentComponent implements OnInit {
+
+  @Input()
+  public icon: string;
+
+  @Input()
+  public link: string;
+
+  @Input()
+  public title: string;
 
   public constructor() {
   }

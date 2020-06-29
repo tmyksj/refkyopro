@@ -35,9 +35,15 @@
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/nova-dark/theme.css",
               "node_modules/primeng/resources/primeng.css",
+              "node_modules/prismjs/themes/prism-coy.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-clike.js",
+              "node_modules/prismjs/components/prism-c.js",
+              "node_modules/prismjs/components/prism-cpp.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -103,9 +109,15 @@
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/nova-dark/theme.css",
               "node_modules/primeng/resources/primeng.css",
+              "node_modules/prismjs/themes/prism-coy.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-clike.js",
+              "node_modules/prismjs/components/prism-c.js",
+              "node_modules/prismjs/components/prism-cpp.js"
+            ]
           }
         },
         "lint": {

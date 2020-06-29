@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
 import { CardModule } from "primeng/card";
@@ -35,9 +36,12 @@ import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/p
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: "", component: PageHomeComponent },
       { path: "algorithm/:key", component: PageAlgorithmComponent },
+      { path: "library", component: PageLibraryComponent },
+      { path: "library/:key", component: PageLibraryComponent },
       { path: "library/:key/:lang", component: PageLibraryComponent },
       { path: "suggestion", component: PageSuggestionComponent },
       { path: "suggestion/algorithm", component: PageSuggestionAlgorithmComponent },

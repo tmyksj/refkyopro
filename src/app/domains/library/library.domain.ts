@@ -32,7 +32,7 @@ export class LibraryDomain {
     return this.httpClient.get(`assets/library/${key}/${lang}.md`, {
       responseType: "text",
     }).pipe(
-      catchError<string, Observable<string | null>>(() => {
+      catchError<string, Observable<string | null>>((): Observable<string | null> => {
         return of<string | null>(null);
       }),
     );

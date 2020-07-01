@@ -6,7 +6,7 @@
       "langList": [
         "cpp"
       ],
-      "title": "組み合わせ"
+      "title": "Combination"
     },
     {
       "description": "最大公約数を計算",
@@ -14,7 +14,7 @@
       "langList": [
         "cpp"
       ],
-      "title": "最大公約数"
+      "title": "GCD"
     },
     {
       "description": "最小公倍数を計算",
@@ -22,7 +22,7 @@
       "langList": [
         "cpp"
       ],
-      "title": "最小公倍数"
+      "title": "LCM"
     },
     {
       "description": "a^b % mod を計算",

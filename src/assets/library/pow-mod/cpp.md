@@ -1,4 +1,4 @@
-# pow-mod
+# Library - a^b % mod
 ```cpp
 long long pow_mod(long long a, long long b, long long mod) {
     long long r = 1;

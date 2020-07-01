@@ -5,27 +5,21 @@
 
     <h2>コンテンツ</h2>
     <div class="contents">
-      <p-card [style]="{ maxWidth: '25rem' }">
-        <div class="ui-card-title">
-          <i class="pi pi-sort-amount-up"></i>
-          <a routerLink="/algorithm">Algorithm</a>
-        </div>
-        <div>競技プログラミングに使える典型的なアルゴリズムをまとめました。</div>
-      </p-card>
-      <p-card [style]="{ maxWidth: '25rem' }">
-        <div class="ui-card-title">
-          <i class="pi pi-tags"></i>
-          <a routerLink="/library">Library</a>
-        </div>
-        <div>競技プログラミングに使えるライブラリをまとめました。組み合わせや素集合データ構造など。</div>
-      </p-card>
-      <p-card [style]="{ maxWidth: '25rem' }">
-        <div class="ui-card-title">
-          <i class="pi pi-compass"></i>
-          <a routerLink="/suggestion">Suggestion</a>
-        </div>
-        <div>解放が思いつかないときに。いろいろなアルゴリズムをリストアップしてくれます。</div>
-      </p-card>
+      <app-part-card-content icon="pi pi-sort-amount-up"
+                             link="/algorithm"
+                             title="Algorithm">
+        <p>競技プログラミングに使える典型的なアルゴリズムをまとめました。</p>
+      </app-part-card-content>
+      <app-part-card-content icon="pi pi-tags"
+                             link="/library"
+                             title="Library">
+        <p>競技プログラミングに使えるライブラリをまとめました。組み合わせや素集合データ構造など。</p>
+      </app-part-card-content>
+      <app-part-card-content icon="pi pi-compass"
+                             link="/suggestion"
+                             title="Suggestion">
+        <p>解放が思いつかないときに。いろいろなアルゴリズムをリストアップしてくれます。</p>
+      </app-part-card-content>
     </div>
   </div>
 

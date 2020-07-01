@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, ParamMap } from "@angular/router";
-import { Observable } from "rxjs";
 
 import { LibraryItemDto } from "../../domains/library/dtos/library-item/library-item.dto";
 import { LibraryDomain } from "../../domains/library/library.domain";

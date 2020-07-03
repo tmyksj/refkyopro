@@ -41,6 +41,7 @@ import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/p
     HttpClientModule,
     RouterModule.forRoot([
       { path: "", component: PageHomeComponent },
+      { path: "algorithm", component: PageAlgorithmComponent },
       { path: "algorithm/:key", component: PageAlgorithmComponent },
       { path: "library", component: PageLibraryComponent },
       { path: "library/:key", component: PageLibraryComponent },

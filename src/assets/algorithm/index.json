@@ -1,0 +1,14 @@
+{
+  "itemList": [
+    {
+      "description": "ダイクストラ法",
+      "key": "dijkstra",
+      "title": "Dijkstra"
+    },
+    {
+      "description": "動的計画法",
+      "key": "dp",
+      "title": "DP"
+    }
+  ]
+}

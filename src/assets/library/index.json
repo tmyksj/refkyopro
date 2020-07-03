@@ -25,6 +25,22 @@
       "title": "LCM"
     },
     {
+      "description": "最小共通祖先を求めます",
+      "key": "lowest-common-ancestor",
+      "langList": [
+        "cpp"
+      ],
+      "title": "Lowest Common Ancestor"
+    },
+    {
+      "description": "nPk の順列を計算",
+      "key": "permutation",
+      "langList": [
+        "cpp"
+      ],
+      "title": "Permutation"
+    },
+    {
       "description": "a^b % mod を計算",
       "key": "pow-mod",
       "langList": [
@@ -38,7 +54,7 @@
       "langList": [
         "cpp"
       ],
-      "title": "union-find"
+      "title": "Union Find"
     }
   ]
 }

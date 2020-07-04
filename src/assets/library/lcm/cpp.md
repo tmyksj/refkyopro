@@ -1,4 +1,4 @@
-# lcm
+# Library - LCM
 ```cpp
 template <class T>
 T gcd(T a, T b) {

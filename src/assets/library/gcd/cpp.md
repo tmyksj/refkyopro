@@ -1,4 +1,4 @@
-# gcd
+# Library - GCD
 ```cpp
 template <class T>
 T gcd(T a, T b) {

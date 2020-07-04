@@ -1,4 +1,4 @@
-# combination
+# Library - Combination
 ```cpp
 class combination {
     vector<long long> inv;

@@ -2,3 +2,20 @@
   display: block;
   padding: 0.5rem;
 }
+
+.link-github {
+  bottom: 0;
+  height: 90%;
+  margin: auto 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  img {
+    height: 100%;
+  }
+}
+
+.wrapper {
+  position: relative;
+}

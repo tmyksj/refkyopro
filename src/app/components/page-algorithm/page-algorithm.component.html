@@ -1,6 +1,24 @@
 <app-layout-main>
-  <p>
-    <i class="pi pi-cog"></i>
-    <span>開発中です。</span>
-  </p>
+  <ng-container *ngIf="itemContent !== null">
+    <div class="wrapper">
+      <app-part-markdown [content]="itemContent"></app-part-markdown>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="itemList !== null">
+    <div class="wrapper">
+      <h1>Algorithm</h1>
+      <p>競技プログラミングに使える典型的なアルゴリズムをまとめました。</p>
+
+      <h2>コンテンツ</h2>
+      <div class="contents">
+        <app-part-card-content *ngFor="let item of itemList"
+                               [link]="'/algorithm/' + item.key"
+                               [title]="item.title"
+                               icon="pi pi-tags">
+          <p>{{ item.description }}</p>
+        </app-part-card-content>
+      </div>
+    </div>
+  </ng-container>
 </app-layout-main>

@@ -1,4 +1,4 @@
-# Library - union-find
+# Library - Union Find
 ```cpp
 class union_find {
     vector<int> p;

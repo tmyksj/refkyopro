@@ -1,13 +1,13 @@
-# Library - Combination
+# Library - Permutation
 ```cpp
-class combination {
+class permutation {
     vector<long long> inv;
     vector<long long> frac;
     vector<long long> frac_inv;
     long long mod;
 
 public:
-    combination(int n, int m) {
+    permutation(int n, int m) {
         inv = vector<long long>(n + 1, 0);
         frac = vector<long long>(n + 1, 0);
         frac_inv = vector<long long>(n + 1, 0);
@@ -24,7 +24,7 @@ public:
     }
 
     int calc(int n, int k) {
-        return frac[n] * frac_inv[k] % mod * frac_inv[n - k] % mod;
+        return frac[n] * frac_inv[n - k] % mod;
     }
 };
 ```

@@ -18,6 +18,7 @@ import { PartCardContentComponent } from "./components/part-card-content/part-ca
 import { PartMarkdownComponent } from "./components/part-markdown/part-markdown.component";
 import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/part-visual-dijkstra.component";
 import { PageCooperationComponent } from './components/page-cooperation/page-cooperation.component';
+import { PageCooperationAtcoderComponent } from './components/page-cooperation-atcoder/page-cooperation-atcoder.component';
 
 @NgModule({
   bootstrap: [
@@ -37,6 +38,7 @@ import { PageCooperationComponent } from './components/page-cooperation/page-coo
     PartMarkdownComponent,
     PartVisualDijkstraComponent,
     PageCooperationComponent,
+    PageCooperationAtcoderComponent,
   ],
   imports: [
     BrowserModule,

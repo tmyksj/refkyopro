@@ -38,6 +38,11 @@ export class LayoutMainComponent implements OnInit {
         label: "Suggestion",
         routerLink: ["/suggestion"],
       },
+      {
+        icon: "pi pi-fw pi-external-link",
+        label: "Cooperation",
+        routerLink: ["/cooperation"],
+      },
     ];
   }
 

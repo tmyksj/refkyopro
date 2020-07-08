@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-page-cooperation-atcoder-accepted',
-  templateUrl: './page-cooperation-atcoder-accepted.component.html',
-  styleUrls: ['./page-cooperation-atcoder-accepted.component.scss']
+  selector: "app-page-cooperation-atcoder-accepted",
+  styleUrls: ["./page-cooperation-atcoder-accepted.component.scss"],
+  templateUrl: "./page-cooperation-atcoder-accepted.component.html",
 })
 export class PageCooperationAtcoderAcceptedComponent implements OnInit {
 
-  constructor() { }
+  public constructor() {
+  }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }

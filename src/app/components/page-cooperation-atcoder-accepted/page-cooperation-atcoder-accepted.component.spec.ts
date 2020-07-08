@@ -1,16 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PageCooperationAtcoderAcceptedComponent } from './page-cooperation-atcoder-accepted.component';
+import { PageCooperationAtcoderAcceptedComponent } from "./page-cooperation-atcoder-accepted.component";
 
-describe('PageCooperationAtcoderAcceptedComponent', () => {
+describe("PageCooperationAtcoderAcceptedComponent", () => {
+
   let component: PageCooperationAtcoderAcceptedComponent;
   let fixture: ComponentFixture<PageCooperationAtcoderAcceptedComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PageCooperationAtcoderAcceptedComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        PageCooperationAtcoderAcceptedComponent,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +21,8 @@ describe('PageCooperationAtcoderAcceptedComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
+
 });

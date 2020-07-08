@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-page-cooperation',
-  templateUrl: './page-cooperation.component.html',
-  styleUrls: ['./page-cooperation.component.scss']
+  selector: "app-page-cooperation",
+  styleUrls: ["./page-cooperation.component.scss"],
+  templateUrl: "./page-cooperation.component.html",
 })
 export class PageCooperationComponent implements OnInit {
 
-  constructor() { }
+  public constructor() {
+  }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }

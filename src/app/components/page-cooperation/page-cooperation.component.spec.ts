@@ -1,16 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PageCooperationComponent } from './page-cooperation.component';
+import { PageCooperationComponent } from "./page-cooperation.component";
 
-describe('PageCooperationComponent', () => {
+describe("PageCooperationComponent", () => {
+
   let component: PageCooperationComponent;
   let fixture: ComponentFixture<PageCooperationComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PageCooperationComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        PageCooperationComponent,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +21,8 @@ describe('PageCooperationComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
+
 });

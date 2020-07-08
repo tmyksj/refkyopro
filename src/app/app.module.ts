@@ -19,6 +19,7 @@ import { PartMarkdownComponent } from "./components/part-markdown/part-markdown.
 import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/part-visual-dijkstra.component";
 import { PageCooperationComponent } from './components/page-cooperation/page-cooperation.component';
 import { PageCooperationAtcoderComponent } from './components/page-cooperation-atcoder/page-cooperation-atcoder.component';
+import { PageCooperationAtcoderAcceptedComponent } from './components/page-cooperation-atcoder-accepted/page-cooperation-atcoder-accepted.component';
 
 @NgModule({
   bootstrap: [
@@ -39,6 +40,7 @@ import { PageCooperationAtcoderComponent } from './components/page-cooperation-a
     PartVisualDijkstraComponent,
     PageCooperationComponent,
     PageCooperationAtcoderComponent,
+    PageCooperationAtcoderAcceptedComponent,
   ],
   imports: [
     BrowserModule,

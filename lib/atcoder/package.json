@@ -1,0 +1,16 @@
+{
+  "name": "atcoder",
+  "version": "0.0.0",
+  "scripts": {
+    "ts-node": "ts-node"
+  },
+  "private": true,
+  "dependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.7"
+  },
+  "devDependencies": {
+    "@types/selenium-webdriver": "^4.0.9",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.6"
+  }
+}

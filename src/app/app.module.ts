@@ -34,6 +34,7 @@ import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/p
     PageCooperationComponent,
     PageCooperationAtcoderComponent,
     PageCooperationAtcoderAcceptedComponent,
+    PageCooperationAtcoderContestComponent,
     PageErrorComponent,
     PageHomeComponent,
     PageLibraryComponent,
@@ -43,7 +44,6 @@ import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/p
     PartCardContentComponent,
     PartMarkdownComponent,
     PartVisualDijkstraComponent,
-    PageCooperationAtcoderContestComponent,
   ],
   imports: [
     BrowserModule,

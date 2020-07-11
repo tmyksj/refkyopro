@@ -12,6 +12,7 @@ import { PageAlgorithmComponent } from "./components/page-algorithm/page-algorit
 import { PageCooperationComponent } from "./components/page-cooperation/page-cooperation.component";
 import { PageCooperationAtcoderComponent } from "./components/page-cooperation-atcoder/page-cooperation-atcoder.component";
 import { PageCooperationAtcoderAcceptedComponent } from "./components/page-cooperation-atcoder-accepted/page-cooperation-atcoder-accepted.component";
+import { PageCooperationAtcoderContestComponent } from "./components/page-cooperation-atcoder-contest/page-cooperation-atcoder-contest.component";
 import { PageErrorComponent } from "./components/page-error/page-error.component";
 import { PageHomeComponent } from "./components/page-home/page-home.component";
 import { PageLibraryComponent } from "./components/page-library/page-library.component";
@@ -21,7 +22,6 @@ import { PageSuggestionComplexityComponent } from "./components/page-suggestion-
 import { PartCardContentComponent } from "./components/part-card-content/part-card-content.component";
 import { PartMarkdownComponent } from "./components/part-markdown/part-markdown.component";
 import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/part-visual-dijkstra.component";
-import { PageCooperationAtcoderContestComponent } from './components/page-cooperation-atcoder-contest/page-cooperation-atcoder-contest.component';
 
 @NgModule({
   bootstrap: [

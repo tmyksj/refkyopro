@@ -19,8 +19,8 @@ export class PageAlgorithmComponent implements OnInit {
 
   private algorithmDomain: AlgorithmDomain;
 
-  public constructor(activeRecord: ActivatedRoute, algorithmDomain: AlgorithmDomain) {
-    this.activatedRoute = activeRecord;
+  public constructor(activatedRoute: ActivatedRoute, algorithmDomain: AlgorithmDomain) {
+    this.activatedRoute = activatedRoute;
     this.algorithmDomain = algorithmDomain;
   }
 

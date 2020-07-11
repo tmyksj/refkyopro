@@ -1,6 +1,45 @@
 <app-layout-main>
-  <p>
-    <i class="pi pi-cog"></i>
-    <span>開発中です。</span>
-  </p>
+  <ng-container *ngIf="contest !== null">
+    <h1>Cooperation - AtCoder - Accepted</h1>
+    <p>Accepted なプログラムをまとめました。</p>
+
+    <h2>{{ contest.title }}</h2>
+    <p-table [value]="contest.taskList">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>問題名</th>
+        </tr>
+      </ng-template>
+      <ng-template let-task
+                   pTemplate="body">
+        <tr>
+          <td>
+            <a [routerLink]="'/cooperation/atcoder/accepted/' + contest.key + '/' + task.key">{{ task.title }}</a>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </ng-container>
+
+  <ng-container *ngIf="contestList !== null">
+    <h1>Cooperation - AtCoder - Accepted</h1>
+    <p>Accepted なプログラムをまとめました。</p>
+
+    <h2>コンテスト一覧</h2>
+    <p-table [value]="contestList">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>コンテスト名</th>
+        </tr>
+      </ng-template>
+      <ng-template let-contest
+                   pTemplate="body">
+        <tr>
+          <td>
+            <a [routerLink]="'/cooperation/atcoder/accepted/' + contest.key">{{ contest.title }}</a>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </ng-container>
 </app-layout-main>

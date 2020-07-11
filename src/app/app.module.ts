@@ -3,6 +3,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
 import { CardModule } from "primeng/card";
+import { TableModule } from "primeng/table";
 import { TabMenuModule } from "primeng/tabmenu";
 
 import { AppComponent } from "./components/app/app.component";
@@ -52,6 +53,9 @@ import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/p
       { path: "cooperation", component: PageCooperationComponent },
       { path: "cooperation/atcoder", component: PageCooperationAtcoderComponent },
       { path: "cooperation/atcoder/accepted", component: PageCooperationAtcoderAcceptedComponent },
+      { path: "cooperation/atcoder/accepted/:contestKey", component: PageCooperationAtcoderAcceptedComponent },
+      { path: "cooperation/atcoder/accepted/:contestKey/:taskKey", component: PageCooperationAtcoderAcceptedComponent },
+      { path: "cooperation/atcoder/accepted/:contestKey/:taskKey/:lang", component: PageCooperationAtcoderAcceptedComponent },
       { path: "library", component: PageLibraryComponent },
       { path: "library/:key", component: PageLibraryComponent },
       { path: "library/:key/:lang", component: PageLibraryComponent },
@@ -61,6 +65,7 @@ import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/p
       { path: "**", component: PageErrorComponent },
     ]),
     CardModule,
+    TableModule,
     TabMenuModule,
   ],
   providers: [

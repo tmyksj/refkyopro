@@ -2,7 +2,7 @@ name: Node.js CI
 on: [push]
 jobs:
   build:
-    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -14,7 +14,7 @@ jobs:
     - run: yarn test --browsers ChromeHeadless --watch false
     - run: yarn lint
     - name: Deploy to gh-pages
-      if: ${{ success() }}
+      if: ${{ success() && github.ref == 'refs/heads/master' }}
       run: |
         git config --local author.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local author.name "github-actions[bot]"

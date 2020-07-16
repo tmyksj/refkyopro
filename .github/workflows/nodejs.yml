@@ -2,7 +2,7 @@ name: Node.js CI
 on: [push]
 jobs:
   build:
-    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -10,6 +10,25 @@ jobs:
       with:
         node-version: 14.x
     - run: yarn install
-    - run: yarn build
+    - run: yarn build --base-href /refkyopro/ --prod
     - run: yarn test --browsers ChromeHeadless --watch false
     - run: yarn lint
+    - name: Deploy to gh-pages
+      if: ${{ success() && github.ref == 'refs/heads/master' }}
+      run: |
+        git config --local author.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local author.name "github-actions[bot]"
+        git config --local committer.email "noreply@github.com"
+        git config --local committer.name "GitHub"
+
+        git fetch
+        git checkout gh-pages
+        rm -rf $(git ls-files)
+
+        cp -rf ./dist/refkyopro/* ./
+        cp -rf ./dist/refkyopro/index.html ./404.html
+        rm -rf ./dist/ ./node_modules/
+
+        git add --all
+        git commit --allow-empty --message "[skip ci] Auto-generated commit"
+        git push origin gh-pages

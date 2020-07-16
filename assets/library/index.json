@@ -1,0 +1,60 @@
+{
+  "itemList": [
+    {
+      "description": "nCk の組み合わせを計算",
+      "key": "combination",
+      "langList": [
+        "cpp"
+      ],
+      "title": "Combination"
+    },
+    {
+      "description": "最大公約数を計算",
+      "key": "gcd",
+      "langList": [
+        "cpp"
+      ],
+      "title": "GCD"
+    },
+    {
+      "description": "最小公倍数を計算",
+      "key": "lcm",
+      "langList": [
+        "cpp"
+      ],
+      "title": "LCM"
+    },
+    {
+      "description": "最小共通祖先を求めます",
+      "key": "lowest-common-ancestor",
+      "langList": [
+        "cpp"
+      ],
+      "title": "Lowest Common Ancestor"
+    },
+    {
+      "description": "nPk の順列を計算",
+      "key": "permutation",
+      "langList": [
+        "cpp"
+      ],
+      "title": "Permutation"
+    },
+    {
+      "description": "a^b % mod を計算",
+      "key": "pow-mod",
+      "langList": [
+        "cpp"
+      ],
+      "title": "a^b % mod"
+    },
+    {
+      "description": "素集合データ構造を提供",
+      "key": "union-find",
+      "langList": [
+        "cpp"
+      ],
+      "title": "Union Find"
+    }
+  ]
+}

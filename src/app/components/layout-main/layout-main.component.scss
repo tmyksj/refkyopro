@@ -3,6 +3,10 @@
   padding: 0.5rem;
 }
 
+.header-wrapper {
+  position: relative;
+}
+
 .link-github {
   bottom: 0;
   height: 90%;
@@ -16,6 +20,6 @@
   }
 }
 
-.wrapper {
-  position: relative;
+.main-wrapper {
+  margin: 2rem;
 }

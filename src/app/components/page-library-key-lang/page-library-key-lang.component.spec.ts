@@ -1,16 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PageLibraryKeyLangComponent } from './page-library-key-lang.component';
+import { PageLibraryKeyLangComponent } from "./page-library-key-lang.component";
 
-describe('PageLibraryKeyLangComponent', () => {
+describe("PageLibraryKeyLangComponent", () => {
+
   let component: PageLibraryKeyLangComponent;
   let fixture: ComponentFixture<PageLibraryKeyLangComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PageLibraryKeyLangComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        PageLibraryKeyLangComponent,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +21,8 @@ describe('PageLibraryKeyLangComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
+
 });

@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-page-library-key-lang',
-  templateUrl: './page-library-key-lang.component.html',
-  styleUrls: ['./page-library-key-lang.component.scss']
+  selector: "app-page-library-key-lang",
+  styleUrls: ["./page-library-key-lang.component.scss"],
+  templateUrl: "./page-library-key-lang.component.html",
 })
 export class PageLibraryKeyLangComponent implements OnInit {
 
-  constructor() { }
+  public constructor() {
+  }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }

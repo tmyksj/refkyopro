@@ -8,9 +8,12 @@ import { TabMenuModule } from "primeng/tabmenu";
 import { AppComponent } from "./components/app/app.component";
 import { LayoutMainComponent } from "./components/layout-main/layout-main.component";
 import { PageAlgorithmComponent } from "./components/page-algorithm/page-algorithm.component";
+import { PageAlgorithmKeyComponent } from "./components/page-algorithm-key/page-algorithm-key.component";
 import { PageErrorComponent } from "./components/page-error/page-error.component";
 import { PageHomeComponent } from "./components/page-home/page-home.component";
 import { PageLibraryComponent } from "./components/page-library/page-library.component";
+import { PageLibraryKeyComponent } from "./components/page-library-key/page-library-key.component";
+import { PageLibraryKeyLangComponent } from "./components/page-library-key-lang/page-library-key-lang.component";
 import { PageSuggestionComponent } from "./components/page-suggestion/page-suggestion.component";
 import { PageSuggestionAlgorithmComponent } from "./components/page-suggestion-algorithm/page-suggestion-algorithm.component";
 import { PageSuggestionComplexityComponent } from "./components/page-suggestion-complexity/page-suggestion-complexity.component";
@@ -19,9 +22,6 @@ import { PartCardContentBoxComponent } from "./components/part-card-content-box/
 import { PartContainerMainComponent } from "./components/part-container-main/part-container-main.component";
 import { PartMarkdownComponent } from "./components/part-markdown/part-markdown.component";
 import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/part-visual-dijkstra.component";
-import { PageAlgorithmKeyComponent } from './components/page-algorithm-key/page-algorithm-key.component';
-import { PageLibraryKeyComponent } from './components/page-library-key/page-library-key.component';
-import { PageLibraryKeyLangComponent } from './components/page-library-key-lang/page-library-key-lang.component';
 
 @NgModule({
   bootstrap: [
@@ -31,9 +31,12 @@ import { PageLibraryKeyLangComponent } from './components/page-library-key-lang/
     AppComponent,
     LayoutMainComponent,
     PageAlgorithmComponent,
+    PageAlgorithmKeyComponent,
     PageErrorComponent,
     PageHomeComponent,
     PageLibraryComponent,
+    PageLibraryKeyComponent,
+    PageLibraryKeyLangComponent,
     PageSuggestionComponent,
     PageSuggestionAlgorithmComponent,
     PageSuggestionComplexityComponent,
@@ -42,9 +45,6 @@ import { PageLibraryKeyLangComponent } from './components/page-library-key-lang/
     PartContainerMainComponent,
     PartMarkdownComponent,
     PartVisualDijkstraComponent,
-    PageAlgorithmKeyComponent,
-    PageLibraryKeyComponent,
-    PageLibraryKeyLangComponent,
   ],
   imports: [
     BrowserModule,

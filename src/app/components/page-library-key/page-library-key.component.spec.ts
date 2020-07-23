@@ -1,16 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PageLibraryKeyComponent } from './page-library-key.component';
+import { PageLibraryKeyComponent } from "./page-library-key.component";
 
-describe('PageLibraryKeyComponent', () => {
+describe("PageLibraryKeyComponent", () => {
+
   let component: PageLibraryKeyComponent;
   let fixture: ComponentFixture<PageLibraryKeyComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PageLibraryKeyComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        PageLibraryKeyComponent,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +21,8 @@ describe('PageLibraryKeyComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
+
 });

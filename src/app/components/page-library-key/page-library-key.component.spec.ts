@@ -1,4 +1,6 @@
+import { HttpClientTestingModule } from "@angular/common/http/testing";
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { RouterTestingModule } from "@angular/router/testing";
 
 import { PageLibraryKeyComponent } from "./page-library-key.component";
 
@@ -11,6 +13,10 @@ describe("PageLibraryKeyComponent", () => {
     TestBed.configureTestingModule({
       declarations: [
         PageLibraryKeyComponent,
+      ],
+      imports: [
+        HttpClientTestingModule,
+        RouterTestingModule,
       ],
     }).compileComponents();
   }));

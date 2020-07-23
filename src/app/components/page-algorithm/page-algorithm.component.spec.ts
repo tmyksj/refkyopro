@@ -1,6 +1,5 @@
 import { HttpClientTestingModule } from "@angular/common/http/testing";
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import { RouterTestingModule } from "@angular/router/testing";
 
 import { PageAlgorithmComponent } from "./page-algorithm.component";
 
@@ -16,7 +15,6 @@ describe("PageAlgorithmComponent", () => {
       ],
       imports: [
         HttpClientTestingModule,
-        RouterTestingModule,
       ],
     }).compileComponents();
   }));

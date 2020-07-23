@@ -1,1 +1,15 @@
-<p>page-library-key works!</p>
+<app-layout-main>
+  <app-part-container-main>
+    <ng-container *ngIf="item !== null">
+      <h1>Library - {{ item.title }}</h1>
+      <p>{{ item.description }}</p>
+
+      <h2>言語リスト</h2>
+      <ul>
+        <li *ngFor="let lang of item.langList">
+          <a [routerLink]="'/library/' + item.key + '/' + lang">{{ lang }}</a>
+        </li>
+      </ul>
+    </ng-container>
+  </app-part-container-main>
+</app-layout-main>

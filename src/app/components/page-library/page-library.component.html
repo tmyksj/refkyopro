@@ -1,34 +1,16 @@
 <app-layout-main>
   <app-part-container-main>
-    <ng-container *ngIf="item !== null">
-      <h1>Library - {{ item.title }}</h1>
-      <p>{{ item.description }}</p>
+    <h1>Library</h1>
+    <p>競技プログラミングに使えるライブラリをまとめました。組み合わせや素集合データ構造など。</p>
 
-      <h2>言語リスト</h2>
-      <ul>
-        <li *ngFor="let lang of item.langList">
-          <a [routerLink]="'/library/' + item.key + '/' + lang">{{ lang }}</a>
-        </li>
-      </ul>
-    </ng-container>
-
-    <ng-container *ngIf="itemContent !== null">
-      <app-part-markdown [content]="itemContent"></app-part-markdown>
-    </ng-container>
-
-    <ng-container *ngIf="itemList !== null">
-      <h1>Library</h1>
-      <p>競技プログラミングに使えるライブラリをまとめました。組み合わせや素集合データ構造など。</p>
-
-      <h2>コンテンツ</h2>
-      <app-part-card-content-box>
-        <app-part-card-content *ngFor="let item of itemList"
-                               [link]="'/library/' + item.key"
-                               [title]="item.title"
-                               icon="pi pi-tags">
-          <p>{{ item.description }}</p>
-        </app-part-card-content>
-      </app-part-card-content-box>
-    </ng-container>
+    <h2>コンテンツ</h2>
+    <app-part-card-content-box>
+      <app-part-card-content *ngFor="let item of itemList"
+                             [link]="'/library/' + item.key"
+                             [title]="item.title"
+                             icon="pi pi-tags">
+        <p>{{ item.description }}</p>
+      </app-part-card-content>
+    </app-part-card-content-box>
   </app-part-container-main>
 </app-layout-main>

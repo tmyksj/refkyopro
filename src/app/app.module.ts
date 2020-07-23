@@ -52,10 +52,10 @@ import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/p
     RouterModule.forRoot([
       { path: "", component: PageHomeComponent },
       { path: "algorithm", component: PageAlgorithmComponent },
-      { path: "algorithm/:key", component: PageAlgorithmComponent },
+      { path: "algorithm/:key", component: PageAlgorithmKeyComponent },
       { path: "library", component: PageLibraryComponent },
-      { path: "library/:key", component: PageLibraryComponent },
-      { path: "library/:key/:lang", component: PageLibraryComponent },
+      { path: "library/:key", component: PageLibraryKeyComponent },
+      { path: "library/:key/:lang", component: PageLibraryKeyLangComponent },
       { path: "suggestion", component: PageSuggestionComponent },
       { path: "suggestion/algorithm", component: PageSuggestionAlgorithmComponent },
       { path: "suggestion/complexity", component: PageSuggestionComplexityComponent },

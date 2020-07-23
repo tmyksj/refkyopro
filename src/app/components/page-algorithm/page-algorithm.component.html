@@ -1,22 +1,16 @@
 <app-layout-main>
   <app-part-container-main>
-    <ng-container *ngIf="itemContent !== null">
-      <app-part-markdown [content]="itemContent"></app-part-markdown>
-    </ng-container>
+    <h1>Algorithm</h1>
+    <p>競技プログラミングに使える典型的なアルゴリズムをまとめました。</p>
 
-    <ng-container *ngIf="itemList !== null">
-      <h1>Algorithm</h1>
-      <p>競技プログラミングに使える典型的なアルゴリズムをまとめました。</p>
-
-      <h2>コンテンツ</h2>
-      <app-part-card-content-box>
-        <app-part-card-content *ngFor="let item of itemList"
-                               [link]="'/algorithm/' + item.key"
-                               [title]="item.title"
-                               icon="pi pi-tags">
-          <p>{{ item.description }}</p>
-        </app-part-card-content>
-      </app-part-card-content-box>
-    </ng-container>
+    <h2>コンテンツ</h2>
+    <app-part-card-content-box>
+      <app-part-card-content *ngFor="let item of itemList"
+                             [link]="'/algorithm/' + item.key"
+                             [title]="item.title"
+                             icon="pi pi-tags">
+        <p>{{ item.description }}</p>
+      </app-part-card-content>
+    </app-part-card-content-box>
   </app-part-container-main>
 </app-layout-main>

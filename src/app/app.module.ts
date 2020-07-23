@@ -19,6 +19,7 @@ import { PartCardContentBoxComponent } from "./components/part-card-content-box/
 import { PartContainerMainComponent } from "./components/part-container-main/part-container-main.component";
 import { PartMarkdownComponent } from "./components/part-markdown/part-markdown.component";
 import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/part-visual-dijkstra.component";
+import { PageAlgorithmKeyComponent } from './components/page-algorithm-key/page-algorithm-key.component';
 
 @NgModule({
   bootstrap: [
@@ -39,6 +40,7 @@ import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/p
     PartContainerMainComponent,
     PartMarkdownComponent,
     PartVisualDijkstraComponent,
+    PageAlgorithmKeyComponent,
   ],
   imports: [
     BrowserModule,

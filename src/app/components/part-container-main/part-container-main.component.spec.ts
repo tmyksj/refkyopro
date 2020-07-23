@@ -1,16 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PartContainerMainComponent } from './part-container-main.component';
+import { PartContainerMainComponent } from "./part-container-main.component";
 
-describe('PartContainerMainComponent', () => {
+describe("PartContainerMainComponent", () => {
+
   let component: PartContainerMainComponent;
   let fixture: ComponentFixture<PartContainerMainComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PartContainerMainComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        PartContainerMainComponent,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +21,8 @@ describe('PartContainerMainComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
+
 });

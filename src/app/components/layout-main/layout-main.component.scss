@@ -3,6 +3,10 @@
   padding: 0.5rem;
 }
 
+.header {
+  position: relative;
+}
+
 .link-github {
   bottom: 0;
   height: 90%;
@@ -14,8 +18,4 @@
   img {
     height: 100%;
   }
-}
-
-.wrapper {
-  position: relative;
 }

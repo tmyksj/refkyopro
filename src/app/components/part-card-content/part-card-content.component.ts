@@ -17,6 +17,9 @@ export class PartCardContentComponent implements OnInit {
   public title: string;
 
   public constructor() {
+    this.icon = "";
+    this.link = "";
+    this.title = "";
   }
 
   public ngOnInit(): void {

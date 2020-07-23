@@ -1,0 +1,7 @@
+<app-layout-main>
+  <app-part-container-main>
+    <ng-container *ngIf="itemContent !== null">
+      <app-part-markdown [content]="itemContent"></app-part-markdown>
+    </ng-container>
+  </app-part-container-main>
+</app-layout-main>

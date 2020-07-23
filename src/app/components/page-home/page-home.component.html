@@ -1,10 +1,10 @@
 <app-layout-main>
-  <div class="wrapper">
+  <app-part-container-main width="50%">
     <h1>Refkyopro</h1>
     <p>競技プログラミング関連の情報をまとめました。</p>
 
     <h2>コンテンツ</h2>
-    <div class="contents">
+    <app-part-card-content-box>
       <app-part-card-content icon="pi pi-sort-amount-up"
                              link="/algorithm"
                              title="Algorithm">
@@ -20,10 +20,10 @@
                              title="Suggestion">
         <p>解放が思いつかないときに。いろいろなアルゴリズムをリストアップしてくれます。</p>
       </app-part-card-content>
-    </div>
-  </div>
+    </app-part-card-content-box>
 
-  <div class="visual-wrapper"></div>
-  <app-part-visual-dijkstra height="2000"
-                            width="2000"></app-part-visual-dijkstra>
+    <div class="visual-wrapper"></div>
+    <app-part-visual-dijkstra height="2000"
+                              width="2000"></app-part-visual-dijkstra>
+  </app-part-container-main>
 </app-layout-main>

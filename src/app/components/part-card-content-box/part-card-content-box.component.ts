@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-part-card-content-box',
-  templateUrl: './part-card-content-box.component.html',
-  styleUrls: ['./part-card-content-box.component.scss']
+  selector: "app-part-card-content-box",
+  styleUrls: ["./part-card-content-box.component.scss"],
+  templateUrl: "./part-card-content-box.component.html",
 })
 export class PartCardContentBoxComponent implements OnInit {
 
-  constructor() { }
+  public constructor() {
+  }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }

@@ -15,9 +15,9 @@ import { PageSuggestionComponent } from "./components/page-suggestion/page-sugge
 import { PageSuggestionAlgorithmComponent } from "./components/page-suggestion-algorithm/page-suggestion-algorithm.component";
 import { PageSuggestionComplexityComponent } from "./components/page-suggestion-complexity/page-suggestion-complexity.component";
 import { PartCardContentComponent } from "./components/part-card-content/part-card-content.component";
+import { PartCardContentBoxComponent } from "./components/part-card-content-box/part-card-content-box.component";
 import { PartMarkdownComponent } from "./components/part-markdown/part-markdown.component";
 import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/part-visual-dijkstra.component";
-import { PartCardContentBoxComponent } from './components/part-card-content-box/part-card-content-box.component';
 
 @NgModule({
   bootstrap: [
@@ -34,9 +34,9 @@ import { PartCardContentBoxComponent } from './components/part-card-content-box/
     PageSuggestionAlgorithmComponent,
     PageSuggestionComplexityComponent,
     PartCardContentComponent,
+    PartCardContentBoxComponent,
     PartMarkdownComponent,
     PartVisualDijkstraComponent,
-    PartCardContentBoxComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PartCardContentBoxComponent } from './part-card-content-box.component';
+import { PartCardContentBoxComponent } from "./part-card-content-box.component";
 
-describe('PartCardContentBoxComponent', () => {
+describe("PartCardContentBoxComponent", () => {
+
   let component: PartCardContentBoxComponent;
   let fixture: ComponentFixture<PartCardContentBoxComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PartCardContentBoxComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        PartCardContentBoxComponent,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +21,8 @@ describe('PartCardContentBoxComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
+
 });

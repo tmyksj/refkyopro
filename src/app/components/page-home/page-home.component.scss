@@ -1,7 +1,3 @@
-app-part-card-content {
-  margin: 0 1rem 1rem 0;
-}
-
 app-part-visual-dijkstra {
   height: 2000px;
   left: 50%;
@@ -10,12 +6,6 @@ app-part-visual-dijkstra {
   transform: translateX(-25%) translateY(-50%);
   width: 2000px;
   z-index: -2;
-}
-
-.contents {
-  display: flex;
-  flex-wrap: wrap;
-  width: 50%;
 }
 
 .visual-wrapper {

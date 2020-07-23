@@ -1,9 +1,11 @@
-<p-card [style]="{ width: '25rem' }">
-  <div class="ui-card-title">
-    <i [class]="icon"></i>
-    <a [routerLink]="link">{{ title }}</a>
-  </div>
-  <div>
-    <ng-content></ng-content>
-  </div>
-</p-card>
+<div class="wrapper">
+  <p-card [style]="{ width: '25rem' }">
+    <div class="ui-card-title">
+      <i [class]="icon"></i>
+      <a [routerLink]="link">{{ title }}</a>
+    </div>
+    <div>
+      <ng-content></ng-content>
+    </div>
+  </p-card>
+</div>

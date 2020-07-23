@@ -1,8 +1,20 @@
 <app-layout-main>
-  <app-part-container-main width="100%">
-    <p>
-      <i class="pi pi-cog"></i>
-      <span>開発中です。</span>
-    </p>
+  <app-part-container-main>
+    <h1>Suggestion</h1>
+    <p>解法が思いつかないときに。いろいろなアルゴリズムをリストアップしてくれます。</p>
+
+    <h2>コンテンツ</h2>
+    <app-part-card-content-box>
+      <app-part-card-content icon="pi pi-compass"
+                             link="/suggestion/algorithm"
+                             title="Algorithm">
+        <p>いろいろなアルゴリズムをリストアップしてくれます。考察のきっかけに。</p>
+      </app-part-card-content>
+      <app-part-card-content icon="pi pi-compass"
+                             link="/suggestion/complexity"
+                             title="Complexity">
+        <p>制約をもとに現実的な時間で実行できる計算量をリストアップしてくれます。</p>
+      </app-part-card-content>
+    </app-part-card-content-box>
   </app-part-container-main>
 </app-layout-main>

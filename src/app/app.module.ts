@@ -20,6 +20,7 @@ import { PartContainerMainComponent } from "./components/part-container-main/par
 import { PartMarkdownComponent } from "./components/part-markdown/part-markdown.component";
 import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/part-visual-dijkstra.component";
 import { PageAlgorithmKeyComponent } from './components/page-algorithm-key/page-algorithm-key.component';
+import { PageLibraryKeyComponent } from './components/page-library-key/page-library-key.component';
 
 @NgModule({
   bootstrap: [
@@ -41,6 +42,7 @@ import { PageAlgorithmKeyComponent } from './components/page-algorithm-key/page-
     PartMarkdownComponent,
     PartVisualDijkstraComponent,
     PageAlgorithmKeyComponent,
+    PageLibraryKeyComponent,
   ],
   imports: [
     BrowserModule,

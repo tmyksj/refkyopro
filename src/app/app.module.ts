@@ -31,6 +31,7 @@ import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/p
 import { PageCooperationAtcoderContestKeyComponent } from './components/page-cooperation-atcoder-contest-key/page-cooperation-atcoder-contest-key.component';
 import { PageCooperationAtcoderContestKeyTaskKeyComponent } from './components/page-cooperation-atcoder-contest-key-task-key/page-cooperation-atcoder-contest-key-task-key.component';
 import { PageCooperationAtcoderContestKeyTaskKeyAcceptedComponent } from './components/page-cooperation-atcoder-contest-key-task-key-accepted/page-cooperation-atcoder-contest-key-task-key-accepted.component';
+import { PageCooperationAtcoderContestKeyTaskKeyAcceptedLangComponent } from './components/page-cooperation-atcoder-contest-key-task-key-accepted-lang/page-cooperation-atcoder-contest-key-task-key-accepted-lang.component';
 
 @NgModule({
   bootstrap: [
@@ -62,6 +63,7 @@ import { PageCooperationAtcoderContestKeyTaskKeyAcceptedComponent } from './comp
     PageCooperationAtcoderContestKeyComponent,
     PageCooperationAtcoderContestKeyTaskKeyComponent,
     PageCooperationAtcoderContestKeyTaskKeyAcceptedComponent,
+    PageCooperationAtcoderContestKeyTaskKeyAcceptedLangComponent,
   ],
   imports: [
     BrowserModule,

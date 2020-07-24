@@ -1,1 +1,17 @@
-<p>page-cooperation-atcoder-contest-key-task-key works!</p>
+<app-layout-main>
+  <app-part-container-main>
+    <ng-container *ngIf="task !== null">
+      <h1>Cooperation - AtCoder</h1>
+      <p>コンテストの情報を集めました。</p>
+
+      <h2>{{ task.title }}</h2>
+      <div class="contents">
+        <app-part-card-content [link]="'/cooperation/atcoder/contest/' + contestKey + '/' + task.key + '/accepted'"
+                               icon="pi pi-external-link"
+                               title="Accepted">
+          <p>Accepted なプログラムをまとめています。</p>
+        </app-part-card-content>
+      </div>
+    </ng-container>
+  </app-part-container-main>
+</app-layout-main>

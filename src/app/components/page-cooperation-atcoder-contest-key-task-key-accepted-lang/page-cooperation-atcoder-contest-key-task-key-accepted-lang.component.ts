@@ -1,4 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+
+import { CooperationAtcoderDomain } from "../../domains/cooperation-atcoder/cooperation-atcoder.domain";
 
 @Component({
   selector: "app-page-cooperation-atcoder-contest-key-task-key-accepted-lang",
@@ -7,7 +10,13 @@ import { Component, OnInit } from "@angular/core";
 })
 export class PageCooperationAtcoderContestKeyTaskKeyAcceptedLangComponent implements OnInit {
 
-  public constructor() {
+  private activatedRoute: ActivatedRoute;
+
+  private cooperationAtcoderDomain: CooperationAtcoderDomain;
+
+  public constructor(activatedRoute: ActivatedRoute, cooperationAtcoderDomain: CooperationAtcoderDomain) {
+    this.activatedRoute = activatedRoute;
+    this.cooperationAtcoderDomain = cooperationAtcoderDomain;
   }
 
   public ngOnInit(): void {

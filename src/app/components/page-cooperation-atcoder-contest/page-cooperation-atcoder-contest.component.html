@@ -1,29 +1,5 @@
 <app-layout-main>
-  <ng-container *ngIf="contest !== null">
-    <h1>Cooperation - AtCoder</h1>
-    <p>コンテストの情報を集めました。</p>
-
-    <h2>{{ contest.title }}</h2>
-
-    <h3>タスク一覧</h3>
-    <p-table [value]="contest.taskList">
-      <ng-template pTemplate="header">
-        <tr>
-          <th>タスク名</th>
-        </tr>
-      </ng-template>
-      <ng-template let-task
-                   pTemplate="body">
-        <tr>
-          <td>
-            <a [routerLink]="'/cooperation/atcoder/contest/' + contest.key + '/' + task.key">{{ task.title }}</a>
-          </td>
-        </tr>
-      </ng-template>
-    </p-table>
-  </ng-container>
-
-  <ng-container *ngIf="contestList !== null">
+  <app-part-container-main>
     <h1>Cooperation - AtCoder</h1>
     <p>コンテストの情報を集めました。</p>
 
@@ -43,19 +19,5 @@
         </tr>
       </ng-template>
     </p-table>
-  </ng-container>
-
-  <ng-container *ngIf="task !== null">
-    <h1>Cooperation - AtCoder</h1>
-    <p>コンテストの情報を集めました。</p>
-
-    <h2>{{ task.title }}</h2>
-    <div class="contents">
-      <app-part-card-content [link]="'/cooperation/atcoder/contest/' + contestKey + '/' + task.key + '/accepted'"
-                             icon="pi pi-external-link"
-                             title="Accepted">
-        <p>Accepted なプログラムをまとめています。</p>
-      </app-part-card-content>
-    </div>
-  </ng-container>
+  </app-part-container-main>
 </app-layout-main>

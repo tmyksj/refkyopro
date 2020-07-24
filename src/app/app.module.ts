@@ -12,7 +12,6 @@ import { PageAlgorithmComponent } from "./components/page-algorithm/page-algorit
 import { PageAlgorithmKeyComponent } from "./components/page-algorithm-key/page-algorithm-key.component";
 import { PageCooperationComponent } from "./components/page-cooperation/page-cooperation.component";
 import { PageCooperationAtcoderComponent } from "./components/page-cooperation-atcoder/page-cooperation-atcoder.component";
-import { PageCooperationAtcoderAcceptedComponent } from "./components/page-cooperation-atcoder-accepted/page-cooperation-atcoder-accepted.component";
 import { PageCooperationAtcoderContestComponent } from "./components/page-cooperation-atcoder-contest/page-cooperation-atcoder-contest.component";
 import { PageCooperationAtcoderContestKeyComponent } from "./components/page-cooperation-atcoder-contest-key/page-cooperation-atcoder-contest-key.component";
 import { PageCooperationAtcoderContestKeyTaskKeyComponent } from "./components/page-cooperation-atcoder-contest-key-task-key/page-cooperation-atcoder-contest-key-task-key.component";
@@ -44,7 +43,6 @@ import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/p
     PageAlgorithmKeyComponent,
     PageCooperationComponent,
     PageCooperationAtcoderComponent,
-    PageCooperationAtcoderAcceptedComponent,
     PageCooperationAtcoderContestComponent,
     PageCooperationAtcoderContestKeyComponent,
     PageCooperationAtcoderContestKeyTaskKeyComponent,
@@ -75,10 +73,10 @@ import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/p
       { path: "cooperation", component: PageCooperationComponent },
       { path: "cooperation/atcoder", component: PageCooperationAtcoderComponent },
       { path: "cooperation/atcoder/contest", component: PageCooperationAtcoderContestComponent },
-      { path: "cooperation/atcoder/contest/:contestKey", component: PageCooperationAtcoderContestComponent },
-      { path: "cooperation/atcoder/contest/:contestKey/:taskKey", component: PageCooperationAtcoderContestComponent },
-      { path: "cooperation/atcoder/contest/:contestKey/:taskKey/accepted", component: PageCooperationAtcoderAcceptedComponent },
-      { path: "cooperation/atcoder/contest/:contestKey/:taskKey/accepted/:lang", component: PageCooperationAtcoderAcceptedComponent },
+      { path: "cooperation/atcoder/contest/:contestKey", component: PageCooperationAtcoderContestKeyComponent },
+      { path: "cooperation/atcoder/contest/:contestKey/:taskKey", component: PageCooperationAtcoderContestKeyTaskKeyComponent },
+      { path: "cooperation/atcoder/contest/:contestKey/:taskKey/accepted", component: PageCooperationAtcoderContestKeyTaskKeyAcceptedComponent },
+      { path: "cooperation/atcoder/contest/:contestKey/:taskKey/accepted/:lang", component: PageCooperationAtcoderContestKeyTaskKeyAcceptedLangComponent },
       { path: "library", component: PageLibraryComponent },
       { path: "library/:key", component: PageLibraryKeyComponent },
       { path: "library/:key/:lang", component: PageLibraryKeyLangComponent },

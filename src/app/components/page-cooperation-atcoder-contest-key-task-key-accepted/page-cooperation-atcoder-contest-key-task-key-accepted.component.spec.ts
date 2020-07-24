@@ -1,4 +1,6 @@
+import { HttpClientTestingModule } from "@angular/common/http/testing";
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { RouterTestingModule } from "@angular/router/testing";
 
 import { PageCooperationAtcoderContestKeyTaskKeyAcceptedComponent } from "./page-cooperation-atcoder-contest-key-task-key-accepted.component";
 
@@ -11,6 +13,10 @@ describe("PageCooperationAtcoderContestKeyTaskKeyAcceptedComponent", () => {
     TestBed.configureTestingModule({
       declarations: [
         PageCooperationAtcoderContestKeyTaskKeyAcceptedComponent,
+      ],
+      imports: [
+        HttpClientTestingModule,
+        RouterTestingModule,
       ],
     }).compileComponents();
   }));

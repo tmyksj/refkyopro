@@ -1,4 +1,10 @@
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute, ParamMap } from "@angular/router";
+import { Observable, of } from "rxjs";
+import { flatMap } from "rxjs/operators";
+
+import { CooperationAtcoderDomain } from "../../domains/cooperation-atcoder/cooperation-atcoder.domain";
+import { CooperationAtcoderContestDto } from "../../domains/cooperation-atcoder/dtos/cooperation-atcoder-contest/cooperation-atcoder-contest.dto";
 
 @Component({
   selector: "app-page-cooperation-atcoder-contest-key",
@@ -7,10 +13,28 @@ import { Component, OnInit } from "@angular/core";
 })
 export class PageCooperationAtcoderContestKeyComponent implements OnInit {
 
-  public constructor() {
+  public contest: CooperationAtcoderContestDto | null;
+
+  private activatedRoute: ActivatedRoute;
+
+  private cooperationAtcoderDomain: CooperationAtcoderDomain;
+
+  public constructor(activatedRoute: ActivatedRoute, cooperationAtcoderDomain: CooperationAtcoderDomain) {
+    this.contest = null;
+
+    this.activatedRoute = activatedRoute;
+    this.cooperationAtcoderDomain = cooperationAtcoderDomain;
   }
 
   public ngOnInit(): void {
+    this.activatedRoute.paramMap.pipe(
+      flatMap<ParamMap, Observable<CooperationAtcoderContestDto | null>>((paramMap: ParamMap): Observable<CooperationAtcoderContestDto | null> => {
+        const contestKey: string | null = paramMap.get("contestKey");
+        return contestKey !== null ? this.cooperationAtcoderDomain.fetchContest(contestKey) : of<CooperationAtcoderContestDto | null>(null);
+      }),
+    ).subscribe((value: CooperationAtcoderContestDto | null): void => {
+      this.contest = value;
+    });
   }
 
 }

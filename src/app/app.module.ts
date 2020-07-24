@@ -28,6 +28,7 @@ import { PartContainerMainComponent } from "./components/part-container-main/par
 import { PartLanguageComponent } from "./components/part-language/part-language.component";
 import { PartMarkdownComponent } from "./components/part-markdown/part-markdown.component";
 import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/part-visual-dijkstra.component";
+import { PageCooperationAtcoderContestKeyComponent } from './components/page-cooperation-atcoder-contest-key/page-cooperation-atcoder-contest-key.component';
 
 @NgModule({
   bootstrap: [
@@ -56,6 +57,7 @@ import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/p
     PartLanguageComponent,
     PartMarkdownComponent,
     PartVisualDijkstraComponent,
+    PageCooperationAtcoderContestKeyComponent,
   ],
   imports: [
     BrowserModule,

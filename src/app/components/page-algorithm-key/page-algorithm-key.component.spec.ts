@@ -1,26 +1,28 @@
 import { HttpClientTestingModule } from "@angular/common/http/testing";
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { RouterTestingModule } from "@angular/router/testing";
 
-import { PageLibraryComponent } from "./page-library.component";
+import { PageAlgorithmKeyComponent } from "./page-algorithm-key.component";
 
-describe("PageLibraryComponent", () => {
+describe("PageAlgorithmKeyComponent", () => {
 
-  let component: PageLibraryComponent;
-  let fixture: ComponentFixture<PageLibraryComponent>;
+  let component: PageAlgorithmKeyComponent;
+  let fixture: ComponentFixture<PageAlgorithmKeyComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        PageLibraryComponent,
+        PageAlgorithmKeyComponent,
       ],
       imports: [
         HttpClientTestingModule,
+        RouterTestingModule,
       ],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PageLibraryComponent);
+    fixture = TestBed.createComponent(PageAlgorithmKeyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

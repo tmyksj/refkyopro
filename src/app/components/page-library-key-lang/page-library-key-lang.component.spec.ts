@@ -1,26 +1,28 @@
 import { HttpClientTestingModule } from "@angular/common/http/testing";
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { RouterTestingModule } from "@angular/router/testing";
 
-import { PageLibraryComponent } from "./page-library.component";
+import { PageLibraryKeyLangComponent } from "./page-library-key-lang.component";
 
-describe("PageLibraryComponent", () => {
+describe("PageLibraryKeyLangComponent", () => {
 
-  let component: PageLibraryComponent;
-  let fixture: ComponentFixture<PageLibraryComponent>;
+  let component: PageLibraryKeyLangComponent;
+  let fixture: ComponentFixture<PageLibraryKeyLangComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        PageLibraryComponent,
+        PageLibraryKeyLangComponent,
       ],
       imports: [
         HttpClientTestingModule,
+        RouterTestingModule,
       ],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PageLibraryComponent);
+    fixture = TestBed.createComponent(PageLibraryKeyLangComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

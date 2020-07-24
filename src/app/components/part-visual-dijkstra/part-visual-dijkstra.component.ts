@@ -27,6 +27,8 @@ export class PartVisualDijkstraComponent implements OnInit {
   public constructor() {
     this.height = 2000;
     this.interval = 250;
+    this.linkList = [];
+    this.nodeList = [];
     this.size = 30;
     this.width = 2000;
   }

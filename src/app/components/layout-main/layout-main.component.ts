@@ -11,6 +11,7 @@ export class LayoutMainComponent implements OnInit {
   public menuItemList: MenuItem[];
 
   public constructor() {
+    this.menuItemList = [];
   }
 
   public ngOnInit(): void {

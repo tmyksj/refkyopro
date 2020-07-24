@@ -14,6 +14,10 @@ import { PageCooperationComponent } from "./components/page-cooperation/page-coo
 import { PageCooperationAtcoderComponent } from "./components/page-cooperation-atcoder/page-cooperation-atcoder.component";
 import { PageCooperationAtcoderAcceptedComponent } from "./components/page-cooperation-atcoder-accepted/page-cooperation-atcoder-accepted.component";
 import { PageCooperationAtcoderContestComponent } from "./components/page-cooperation-atcoder-contest/page-cooperation-atcoder-contest.component";
+import { PageCooperationAtcoderContestKeyComponent } from "./components/page-cooperation-atcoder-contest-key/page-cooperation-atcoder-contest-key.component";
+import { PageCooperationAtcoderContestKeyTaskKeyComponent } from "./components/page-cooperation-atcoder-contest-key-task-key/page-cooperation-atcoder-contest-key-task-key.component";
+import { PageCooperationAtcoderContestKeyTaskKeyAcceptedComponent } from "./components/page-cooperation-atcoder-contest-key-task-key-accepted/page-cooperation-atcoder-contest-key-task-key-accepted.component";
+import { PageCooperationAtcoderContestKeyTaskKeyAcceptedLangComponent } from "./components/page-cooperation-atcoder-contest-key-task-key-accepted-lang/page-cooperation-atcoder-contest-key-task-key-accepted-lang.component";
 import { PageErrorComponent } from "./components/page-error/page-error.component";
 import { PageHomeComponent } from "./components/page-home/page-home.component";
 import { PageLibraryComponent } from "./components/page-library/page-library.component";
@@ -28,10 +32,6 @@ import { PartContainerMainComponent } from "./components/part-container-main/par
 import { PartLanguageComponent } from "./components/part-language/part-language.component";
 import { PartMarkdownComponent } from "./components/part-markdown/part-markdown.component";
 import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/part-visual-dijkstra.component";
-import { PageCooperationAtcoderContestKeyComponent } from './components/page-cooperation-atcoder-contest-key/page-cooperation-atcoder-contest-key.component';
-import { PageCooperationAtcoderContestKeyTaskKeyComponent } from './components/page-cooperation-atcoder-contest-key-task-key/page-cooperation-atcoder-contest-key-task-key.component';
-import { PageCooperationAtcoderContestKeyTaskKeyAcceptedComponent } from './components/page-cooperation-atcoder-contest-key-task-key-accepted/page-cooperation-atcoder-contest-key-task-key-accepted.component';
-import { PageCooperationAtcoderContestKeyTaskKeyAcceptedLangComponent } from './components/page-cooperation-atcoder-contest-key-task-key-accepted-lang/page-cooperation-atcoder-contest-key-task-key-accepted-lang.component';
 
 @NgModule({
   bootstrap: [
@@ -46,6 +46,10 @@ import { PageCooperationAtcoderContestKeyTaskKeyAcceptedLangComponent } from './
     PageCooperationAtcoderComponent,
     PageCooperationAtcoderAcceptedComponent,
     PageCooperationAtcoderContestComponent,
+    PageCooperationAtcoderContestKeyComponent,
+    PageCooperationAtcoderContestKeyTaskKeyComponent,
+    PageCooperationAtcoderContestKeyTaskKeyAcceptedComponent,
+    PageCooperationAtcoderContestKeyTaskKeyAcceptedLangComponent,
     PageErrorComponent,
     PageHomeComponent,
     PageLibraryComponent,
@@ -60,10 +64,6 @@ import { PageCooperationAtcoderContestKeyTaskKeyAcceptedLangComponent } from './
     PartLanguageComponent,
     PartMarkdownComponent,
     PartVisualDijkstraComponent,
-    PageCooperationAtcoderContestKeyComponent,
-    PageCooperationAtcoderContestKeyTaskKeyComponent,
-    PageCooperationAtcoderContestKeyTaskKeyAcceptedComponent,
-    PageCooperationAtcoderContestKeyTaskKeyAcceptedLangComponent,
   ],
   imports: [
     BrowserModule,

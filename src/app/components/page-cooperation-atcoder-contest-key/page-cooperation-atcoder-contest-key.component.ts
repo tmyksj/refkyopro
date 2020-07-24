@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-page-cooperation-atcoder-contest-key',
-  templateUrl: './page-cooperation-atcoder-contest-key.component.html',
-  styleUrls: ['./page-cooperation-atcoder-contest-key.component.scss']
+  selector: "app-page-cooperation-atcoder-contest-key",
+  styleUrls: ["./page-cooperation-atcoder-contest-key.component.scss"],
+  templateUrl: "./page-cooperation-atcoder-contest-key.component.html",
 })
 export class PageCooperationAtcoderContestKeyComponent implements OnInit {
 
-  constructor() { }
+  public constructor() {
+  }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }

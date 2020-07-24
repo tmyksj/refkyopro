@@ -3,8 +3,8 @@ import { ActivatedRoute, ParamMap } from "@angular/router";
 import { Observable, of } from "rxjs";
 import { flatMap } from "rxjs/operators";
 
-import { CooperationAtcoderDomain } from "../../domains/cooperation-atcoder/cooperation-atcoder.domain";
 import { CooperationAtcoderContestDto } from "../../domains/cooperation-atcoder/dtos/cooperation-atcoder-contest/cooperation-atcoder-contest.dto";
+import { CooperationAtcoderDomain } from "../../domains/cooperation-atcoder/cooperation-atcoder.domain";
 
 @Component({
   selector: "app-page-cooperation-atcoder-contest-key",

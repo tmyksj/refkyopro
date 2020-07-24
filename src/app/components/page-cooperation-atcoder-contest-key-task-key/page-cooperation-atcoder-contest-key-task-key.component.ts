@@ -1,10 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, ParamMap } from "@angular/router";
-import { Observable, of } from "rxjs";
+import { forkJoin, Observable, of } from "rxjs";
 import { flatMap } from "rxjs/operators";
 
-import { CooperationAtcoderDomain } from "../../domains/cooperation-atcoder/cooperation-atcoder.domain";
+import { CooperationAtcoderContestDto } from "../../domains/cooperation-atcoder/dtos/cooperation-atcoder-contest/cooperation-atcoder-contest.dto";
 import { CooperationAtcoderTaskDto } from "../../domains/cooperation-atcoder/dtos/cooperation-atcoder-task/cooperation-atcoder-task.dto";
+import { CooperationAtcoderDomain } from "../../domains/cooperation-atcoder/cooperation-atcoder.domain";
 
 @Component({
   selector: "app-page-cooperation-atcoder-contest-key-task-key",
@@ -13,7 +14,7 @@ import { CooperationAtcoderTaskDto } from "../../domains/cooperation-atcoder/dto
 })
 export class PageCooperationAtcoderContestKeyTaskKeyComponent implements OnInit {
 
-  public contestKey: string | null;
+  public contest: CooperationAtcoderContestDto | null;
 
   public task: CooperationAtcoderTaskDto | null;
 
@@ -22,7 +23,7 @@ export class PageCooperationAtcoderContestKeyTaskKeyComponent implements OnInit 
   private cooperationAtcoderDomain: CooperationAtcoderDomain;
 
   public constructor(activatedRoute: ActivatedRoute, cooperationAtcoderDomain: CooperationAtcoderDomain) {
-    this.contestKey = null;
+    this.contest = null;
     this.task = null;
 
     this.activatedRoute = activatedRoute;
@@ -31,15 +32,16 @@ export class PageCooperationAtcoderContestKeyTaskKeyComponent implements OnInit 
 
   public ngOnInit(): void {
     this.activatedRoute.paramMap.pipe(
-      flatMap<ParamMap, Observable<CooperationAtcoderTaskDto | null>>((paramMap: ParamMap): Observable<CooperationAtcoderTaskDto | null> => {
+      flatMap<ParamMap, Observable<[CooperationAtcoderContestDto | null, CooperationAtcoderTaskDto | null]>>((paramMap: ParamMap): Observable<[CooperationAtcoderContestDto | null, CooperationAtcoderTaskDto | null]> => {
         const contestKey: string | null = paramMap.get("contestKey");
         const taskKey: string | null = paramMap.get("taskKey");
-
-        this.contestKey = contestKey;
-        return contestKey !== null && taskKey !== null ? this.cooperationAtcoderDomain.fetchTask(contestKey, taskKey) : of<CooperationAtcoderTaskDto | null>(null);
+        return contestKey !== null && taskKey !== null
+          ? forkJoin([this.cooperationAtcoderDomain.fetchContest(contestKey), this.cooperationAtcoderDomain.fetchTask(contestKey, taskKey)])
+          : of<[CooperationAtcoderContestDto | null, CooperationAtcoderTaskDto | null]>([null, null]);
       }),
-    ).subscribe((value: CooperationAtcoderTaskDto | null): void => {
-      this.task = value;
+    ).subscribe((value: [CooperationAtcoderContestDto | null, CooperationAtcoderTaskDto | null]): void => {
+      this.contest = value[0];
+      this.task = value[1];
     });
   }
 

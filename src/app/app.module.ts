@@ -20,9 +20,9 @@ import { PageSuggestionComplexityComponent } from "./components/page-suggestion-
 import { PartCardContentComponent } from "./components/part-card-content/part-card-content.component";
 import { PartCardContentBoxComponent } from "./components/part-card-content-box/part-card-content-box.component";
 import { PartContainerMainComponent } from "./components/part-container-main/part-container-main.component";
+import { PartLanguageComponent } from "./components/part-language/part-language.component";
 import { PartMarkdownComponent } from "./components/part-markdown/part-markdown.component";
 import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/part-visual-dijkstra.component";
-import { PartLanguageComponent } from './components/part-language/part-language.component';
 
 @NgModule({
   bootstrap: [
@@ -44,9 +44,9 @@ import { PartLanguageComponent } from './components/part-language/part-language.
     PartCardContentComponent,
     PartCardContentBoxComponent,
     PartContainerMainComponent,
+    PartLanguageComponent,
     PartMarkdownComponent,
     PartVisualDijkstraComponent,
-    PartLanguageComponent,
   ],
   imports: [
     BrowserModule,

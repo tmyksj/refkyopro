@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-part-language',
-  templateUrl: './part-language.component.html',
-  styleUrls: ['./part-language.component.scss']
+  selector: "app-part-language",
+  styleUrls: ["./part-language.component.scss"],
+  templateUrl: "./part-language.component.html",
 })
 export class PartLanguageComponent implements OnInit {
 
-  constructor() { }
+  public constructor() {
+  }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }

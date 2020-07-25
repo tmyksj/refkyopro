@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
+import { Observable, of } from "rxjs";
+import { catchError, map } from "rxjs/operators";
 
 import { CooperationAtcoderContestDto } from "./dtos/cooperation-atcoder-contest/cooperation-atcoder-contest.dto";
 import { CooperationAtcoderIndexDto } from "./dtos/cooperation-atcoder-index/cooperation-atcoder-index.dto";
@@ -16,6 +16,16 @@ export class CooperationAtcoderDomain {
 
   public constructor(httpClient: HttpClient) {
     this.httpClient = httpClient;
+  }
+
+  public fetchAcceptedSource(contestKey: string, taskKey: string, lang: string): Observable<string | null> {
+    return this.httpClient.get(`assets/cooperation-atcoder/contest/${contestKey}/${taskKey}/accepted/main.${lang}`, {
+      responseType: "text",
+    }).pipe(
+      catchError<string, Observable<string | null>>((): Observable<string | null> => {
+        return of<string | null>(null);
+      }),
+    );
   }
 
   public fetchContest(key: string): Observable<CooperationAtcoderContestDto | null> {

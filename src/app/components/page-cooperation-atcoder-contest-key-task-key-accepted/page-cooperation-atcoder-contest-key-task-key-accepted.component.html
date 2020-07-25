@@ -1,6 +1,19 @@
 <app-layout-main>
   <app-part-container-main>
-    <h1>Cooperation - AtCoder</h1>
-    <p>Accepted なプログラムをまとめました。</p>
+    <ng-container *ngIf="contest !== null && task !== null">
+      <h1>Cooperation - AtCoder</h1>
+      <p>Accepted なプログラムをまとめました。</p>
+
+      <h2>{{ contest.title }} - {{ task.title }}</h2>
+
+      <h3>言語リスト</h3>
+      <ul>
+        <li *ngFor="let lang of languageList">
+          <a [routerLink]="'/cooperation/atcoder/contest/' + contest.key + '/' + task.key + '/accepted/' + lang.key">
+            <app-part-language [lang]="lang.key"></app-part-language>
+          </a>
+        </li>
+      </ul>
+    </ng-container>
   </app-part-container-main>
 </app-layout-main>

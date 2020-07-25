@@ -1,1 +1,12 @@
-<p>page-cooperation-atcoder-contest-key-task-key-accepted-lang works!</p>
+<app-layout-main>
+  <app-part-container-main>
+    <ng-container *ngIf="acceptedSource !== null && contest !== null && task !== null">
+      <h1>Cooperation - AtCoder</h1>
+      <p>Accepted なプログラムをまとめました。</p>
+
+      <h2>{{ contest.title }} - {{ task.title }}</h2>
+
+      <app-part-markdown [content]="quote(acceptedSource)"></app-part-markdown>
+    </ng-container>
+  </app-part-container-main>
+</app-layout-main>

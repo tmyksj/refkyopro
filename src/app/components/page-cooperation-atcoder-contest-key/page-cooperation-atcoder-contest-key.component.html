@@ -4,7 +4,7 @@
       <h1>Cooperation - AtCoder</h1>
       <p>コンテストの情報を集めました。</p>
 
-      <h2>{{ contest.title }}</h2>
+      <h2>{{ contest.name }}</h2>
 
       <h3>タスク一覧</h3>
       <p-table [value]="contest.taskList">
@@ -17,7 +17,7 @@
                      pTemplate="body">
           <tr>
             <td>
-              <a [routerLink]="'/cooperation/atcoder/contest/' + contest.key + '/' + task.key">{{ task.title }}</a>
+              <a [routerLink]="'/cooperation/atcoder/contest/' + contest.key + '/' + task.key">{{ task.name }}</a>
             </td>
           </tr>
         </ng-template>

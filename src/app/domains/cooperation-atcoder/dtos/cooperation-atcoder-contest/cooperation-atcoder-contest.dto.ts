@@ -2,10 +2,16 @@ import { CooperationAtcoderTaskDto } from "../cooperation-atcoder-task/cooperati
 
 export interface CooperationAtcoderContestDto {
 
+  readonly duration: string;
+
   readonly key: string;
+
+  readonly name: string;
 
   readonly taskList: CooperationAtcoderTaskDto[];
 
-  readonly title: string;
+  readonly ratedRange: string;
+
+  readonly startedAt: string;
 
 }

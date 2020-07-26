@@ -10,15 +10,23 @@
       <p-table [value]="contest.taskList">
         <ng-template pTemplate="header">
           <tr>
-            <th>タスク名</th>
+            <th></th>
+            <th>問題名</th>
+            <th>実行時間制限</th>
+            <th>メモリ制限</th>
           </tr>
         </ng-template>
         <ng-template let-task
                      pTemplate="body">
           <tr>
             <td>
+              <a [routerLink]="'/cooperation/atcoder/contest/' + contest.key + '/' + task.key">{{ task.label }}</a>
+            </td>
+            <td>
               <a [routerLink]="'/cooperation/atcoder/contest/' + contest.key + '/' + task.key">{{ task.name }}</a>
             </td>
+            <td>{{ task.timeLimit }}</td>
+            <td>{{ task.memoryLimit }}</td>
           </tr>
         </ng-template>
       </p-table>

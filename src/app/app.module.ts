@@ -3,6 +3,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
 import { CardModule } from "primeng/card";
+import { ProgressSpinnerModule } from "primeng/progressspinner";
 import { TabMenuModule } from "primeng/tabmenu";
 
 import { AppComponent } from "./components/app/app.component";
@@ -68,6 +69,7 @@ import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/p
       { path: "**", component: PageErrorComponent },
     ]),
     CardModule,
+    ProgressSpinnerModule,
     TabMenuModule,
   ],
   providers: [

@@ -15,12 +15,15 @@ export class PageLibraryKeyComponent implements OnInit {
 
   public item: LibraryItemDto | null;
 
+  public state: "initiated" | "loaded" | "notFound";
+
   private activatedRoute: ActivatedRoute;
 
   private libraryDomain: LibraryDomain;
 
   public constructor(activatedRoute: ActivatedRoute, libraryDomain: LibraryDomain) {
     this.item = null;
+    this.state = "initiated";
 
     this.activatedRoute = activatedRoute;
     this.libraryDomain = libraryDomain;
@@ -34,6 +37,7 @@ export class PageLibraryKeyComponent implements OnInit {
       }),
     ).subscribe((value: LibraryItemDto | null): void => {
       this.item = value;
+      this.state = (this.item !== null ? "loaded" : "notFound");
     });
   }
 

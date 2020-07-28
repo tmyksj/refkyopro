@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-part-message-center",
@@ -7,7 +7,11 @@ import { Component, OnInit } from "@angular/core";
 })
 export class PartMessageCenterComponent implements OnInit {
 
+  @Input()
+  public icon: string | null;
+
   public constructor() {
+    this.icon = null;
   }
 
   public ngOnInit(): void {

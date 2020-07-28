@@ -1,1 +1,7 @@
-<p>part-message-center works!</p>
+<p>
+  <i *ngIf="icon !== null"
+     [className]="icon"></i>
+  <span>
+    <ng-content></ng-content>
+  </span>
+</p>

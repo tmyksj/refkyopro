@@ -1,16 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PartProgressSpinnerComponent } from './part-progress-spinner.component';
+import { PartProgressSpinnerComponent } from "./part-progress-spinner.component";
 
-describe('PartProgressSpinnerComponent', () => {
+describe("PartProgressSpinnerComponent", () => {
+
   let component: PartProgressSpinnerComponent;
   let fixture: ComponentFixture<PartProgressSpinnerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PartProgressSpinnerComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        PartProgressSpinnerComponent,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +21,8 @@ describe('PartProgressSpinnerComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
+
 });

@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-part-progress-spinner',
-  templateUrl: './part-progress-spinner.component.html',
-  styleUrls: ['./part-progress-spinner.component.scss']
+  selector: "app-part-progress-spinner",
+  styleUrls: ["./part-progress-spinner.component.scss"],
+  templateUrl: "./part-progress-spinner.component.html",
 })
 export class PartProgressSpinnerComponent implements OnInit {
 
-  constructor() { }
+  public constructor() {
+  }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }

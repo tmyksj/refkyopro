@@ -24,6 +24,7 @@ import { PartLanguageComponent } from "./components/part-language/part-language.
 import { PartMarkdownComponent } from "./components/part-markdown/part-markdown.component";
 import { PartProgressSpinnerComponent } from "./components/part-progress-spinner/part-progress-spinner.component";
 import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/part-visual-dijkstra.component";
+import { PartMessageCenterComponent } from './components/part-message-center/part-message-center.component';
 
 @NgModule({
   bootstrap: [
@@ -49,6 +50,7 @@ import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/p
     PartMarkdownComponent,
     PartProgressSpinnerComponent,
     PartVisualDijkstraComponent,
+    PartMessageCenterComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PartMessageCenterComponent } from './part-message-center.component';
+import { PartMessageCenterComponent } from "./part-message-center.component";
 
-describe('PartMessageCenterComponent', () => {
+describe("PartMessageCenterComponent", () => {
+
   let component: PartMessageCenterComponent;
   let fixture: ComponentFixture<PartMessageCenterComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PartMessageCenterComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        PartMessageCenterComponent,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +21,8 @@ describe('PartMessageCenterComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
+
 });

@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-part-message-center',
-  templateUrl: './part-message-center.component.html',
-  styleUrls: ['./part-message-center.component.scss']
+  selector: "app-part-message-center",
+  styleUrls: ["./part-message-center.component.scss"],
+  templateUrl: "./part-message-center.component.html",
 })
 export class PartMessageCenterComponent implements OnInit {
 
-  constructor() { }
+  public constructor() {
+  }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }

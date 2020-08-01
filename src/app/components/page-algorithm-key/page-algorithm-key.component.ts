@@ -14,12 +14,15 @@ export class PageAlgorithmKeyComponent implements OnInit {
 
   public itemContent: string | null;
 
+  public state: "initiated" | "loaded" | "notFound";
+
   private activatedRoute: ActivatedRoute;
 
   private algorithmDomain: AlgorithmDomain;
 
   public constructor(activatedRoute: ActivatedRoute, algorithmDomain: AlgorithmDomain) {
     this.itemContent = null;
+    this.state = "initiated";
 
     this.activatedRoute = activatedRoute;
     this.algorithmDomain = algorithmDomain;
@@ -33,6 +36,7 @@ export class PageAlgorithmKeyComponent implements OnInit {
       }),
     ).subscribe((value: string | null): void => {
       this.itemContent = value;
+      this.state = (this.itemContent !== null ? "loaded" : "notFound");
     });
   }
 

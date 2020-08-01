@@ -1,6 +1,10 @@
 <app-layout-main>
   <app-part-container-main>
-    <ng-container *ngIf="item !== null">
+    <ng-container *ngIf="state === 'initiated'">
+      <app-part-progress-spinner></app-part-progress-spinner>
+    </ng-container>
+
+    <ng-container *ngIf="state === 'loaded'">
       <h1>Library - {{ item.title }}</h1>
       <p>{{ item.description }}</p>
 
@@ -12,6 +16,10 @@
           </a>
         </li>
       </ul>
+    </ng-container>
+
+    <ng-container *ngIf="state === 'notFound'">
+      <app-part-message-center icon="pi pi-info-circle">コンテンツが見つかりませんでした。</app-part-message-center>
     </ng-container>
   </app-part-container-main>
 </app-layout-main>

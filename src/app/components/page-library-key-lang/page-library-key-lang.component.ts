@@ -14,12 +14,15 @@ export class PageLibraryKeyLangComponent implements OnInit {
 
   public itemContent: string | null;
 
+  public state: "initiated" | "loaded" | "notFound";
+
   private activatedRoute: ActivatedRoute;
 
   private libraryDomain: LibraryDomain;
 
   public constructor(activatedRoute: ActivatedRoute, libraryDomain: LibraryDomain) {
     this.itemContent = null;
+    this.state = "initiated";
 
     this.activatedRoute = activatedRoute;
     this.libraryDomain = libraryDomain;
@@ -34,6 +37,7 @@ export class PageLibraryKeyLangComponent implements OnInit {
       }),
     ).subscribe((value: string | null): void => {
       this.itemContent = value;
+      this.state = (this.itemContent !== null ? "loaded" : "notFound");
     });
   }
 

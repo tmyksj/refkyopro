@@ -3,6 +3,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
 import { CardModule } from "primeng/card";
+import { ProgressSpinnerModule } from "primeng/progressspinner";
 import { TableModule } from "primeng/table";
 import { TabMenuModule } from "primeng/tabmenu";
 
@@ -30,6 +31,8 @@ import { PartCardContentBoxComponent } from "./components/part-card-content-box/
 import { PartContainerMainComponent } from "./components/part-container-main/part-container-main.component";
 import { PartLanguageComponent } from "./components/part-language/part-language.component";
 import { PartMarkdownComponent } from "./components/part-markdown/part-markdown.component";
+import { PartMessageCenterComponent } from "./components/part-message-center/part-message-center.component";
+import { PartProgressSpinnerComponent } from "./components/part-progress-spinner/part-progress-spinner.component";
 import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/part-visual-dijkstra.component";
 
 @NgModule({
@@ -61,6 +64,8 @@ import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/p
     PartContainerMainComponent,
     PartLanguageComponent,
     PartMarkdownComponent,
+    PartMessageCenterComponent,
+    PartProgressSpinnerComponent,
     PartVisualDijkstraComponent,
   ],
   imports: [
@@ -86,6 +91,7 @@ import { PartVisualDijkstraComponent } from "./components/part-visual-dijkstra/p
       { path: "**", component: PageErrorComponent },
     ]),
     CardModule,
+    ProgressSpinnerModule,
     TableModule,
     TabMenuModule,
   ],

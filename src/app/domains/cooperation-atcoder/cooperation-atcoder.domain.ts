@@ -19,7 +19,7 @@ export class CooperationAtcoderDomain {
   }
 
   public fetchAcceptedSource(contestKey: string, taskKey: string, lang: string): Observable<string | null> {
-    return this.httpClient.get(`assets/cooperation-atcoder/contest/${contestKey}/${taskKey}/accepted/main.${lang}`, {
+    return this.httpClient.get(`assets/cooperation-atcoder/contest/${contestKey}/${taskKey}/accepted/${lang}.md`, {
       responseType: "text",
     }).pipe(
       catchError<string, Observable<string | null>>((): Observable<string | null> => {

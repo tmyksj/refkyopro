@@ -1,12 +1,15 @@
 <app-layout-main>
   <app-part-container-main>
-    <ng-container *ngIf="acceptedSource !== null && contest !== null && task !== null">
-      <h1>Cooperation - AtCoder</h1>
-      <p>Accepted なプログラムをまとめました。</p>
+    <ng-container *ngIf="state === 'initiated'">
+      <app-part-progress-spinner></app-part-progress-spinner>
+    </ng-container>
 
-      <h2>{{ contest.name }} - {{ task.name }}</h2>
+    <ng-container *ngIf="state === 'loaded'">
+      <app-part-markdown [content]="acceptedSource"></app-part-markdown>
+    </ng-container>
 
-      <app-part-markdown [content]="quote(acceptedSource)"></app-part-markdown>
+    <ng-container *ngIf="state === 'notFound'">
+      <app-part-message-center icon="pi pi-info-circle">コンテンツが見つかりませんでした。</app-part-message-center>
     </ng-container>
   </app-part-container-main>
 </app-layout-main>

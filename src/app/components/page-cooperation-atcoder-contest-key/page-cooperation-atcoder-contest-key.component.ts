@@ -15,12 +15,15 @@ export class PageCooperationAtcoderContestKeyComponent implements OnInit {
 
   public contest: CooperationAtcoderContestDto | null;
 
+  public state: "initiated" | "loaded" | "notFound";
+
   private activatedRoute: ActivatedRoute;
 
   private cooperationAtcoderDomain: CooperationAtcoderDomain;
 
   public constructor(activatedRoute: ActivatedRoute, cooperationAtcoderDomain: CooperationAtcoderDomain) {
     this.contest = null;
+    this.state = "initiated";
 
     this.activatedRoute = activatedRoute;
     this.cooperationAtcoderDomain = cooperationAtcoderDomain;
@@ -34,6 +37,7 @@ export class PageCooperationAtcoderContestKeyComponent implements OnInit {
       }),
     ).subscribe((value: CooperationAtcoderContestDto | null): void => {
       this.contest = value;
+      this.state = (this.contest !== null ? "loaded" : "notFound");
     });
   }
 

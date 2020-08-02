@@ -1,10 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, ParamMap } from "@angular/router";
 import { flatMap } from "rxjs/operators";
-import { forkJoin, Observable, of } from "rxjs";
+import { Observable, of } from "rxjs";
 
-import { CooperationAtcoderContestDto } from "../../domains/cooperation-atcoder/dtos/cooperation-atcoder-contest/cooperation-atcoder-contest.dto";
-import { CooperationAtcoderTaskDto } from "../../domains/cooperation-atcoder/dtos/cooperation-atcoder-task/cooperation-atcoder-task.dto";
 import { CooperationAtcoderDomain } from "../../domains/cooperation-atcoder/cooperation-atcoder.domain";
 
 @Component({
@@ -16,11 +14,7 @@ export class PageCooperationAtcoderContestKeyTaskKeyAcceptedLangComponent implem
 
   public acceptedSource: string | null;
 
-  public contest: CooperationAtcoderContestDto | null;
-
-  public lang: string | null;
-
-  public task: CooperationAtcoderTaskDto | null;
+  public state: "initiated" | "loaded" | "notFound";
 
   private activatedRoute: ActivatedRoute;
 
@@ -28,8 +22,7 @@ export class PageCooperationAtcoderContestKeyTaskKeyAcceptedLangComponent implem
 
   public constructor(activatedRoute: ActivatedRoute, cooperationAtcoderDomain: CooperationAtcoderDomain) {
     this.acceptedSource = null;
-    this.contest = null;
-    this.task = null;
+    this.state = "initiated";
 
     this.activatedRoute = activatedRoute;
     this.cooperationAtcoderDomain = cooperationAtcoderDomain;
@@ -37,24 +30,18 @@ export class PageCooperationAtcoderContestKeyTaskKeyAcceptedLangComponent implem
 
   public ngOnInit(): void {
     this.activatedRoute.paramMap.pipe(
-      flatMap<ParamMap, Observable<[string | null, CooperationAtcoderContestDto | null, string | null, CooperationAtcoderTaskDto | null]>>((paramMap: ParamMap): Observable<[string | null, CooperationAtcoderContestDto | null, string | null, CooperationAtcoderTaskDto | null]> => {
+      flatMap<ParamMap, Observable<string | null>>((paramMap: ParamMap): Observable<string | null> => {
         const contestKey: string | null = paramMap.get("contestKey");
         const taskKey: string | null = paramMap.get("taskKey");
         const lang: string | null = paramMap.get("lang");
         return contestKey !== null && taskKey !== null && lang !== null
-          ? forkJoin([this.cooperationAtcoderDomain.fetchAcceptedSource(contestKey, taskKey, lang), this.cooperationAtcoderDomain.fetchContest(contestKey), of<string | null>(lang), this.cooperationAtcoderDomain.fetchTask(contestKey, taskKey)])
-          : of<[string | null, CooperationAtcoderContestDto | null, string | null, CooperationAtcoderTaskDto | null]>([null, null, null, null]);
+          ? this.cooperationAtcoderDomain.fetchAcceptedSource(contestKey, taskKey, lang)
+          : of<string | null>(null);
       }),
-    ).subscribe((value: [string | null, CooperationAtcoderContestDto | null, string | null, CooperationAtcoderTaskDto | null]): void => {
-      this.acceptedSource = value[0];
-      this.contest = value[1];
-      this.lang = value[2];
-      this.task = value[3];
+    ).subscribe((value: string | null): void => {
+      this.acceptedSource = value;
+      this.state = (this.acceptedSource !== null ? "loaded" : "notFound");
     });
-  }
-
-  public quote(code: string): string {
-    return `\`\`\`${this.lang}\n${code}\`\`\``;
   }
 
 }

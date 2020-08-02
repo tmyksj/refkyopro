@@ -16,6 +16,8 @@ export class PageCooperationAtcoderContestKeyTaskKeyComponent implements OnInit 
 
   public contest: CooperationAtcoderContestDto | null;
 
+  public state: "initiated" | "loaded" | "notFound";
+
   public task: CooperationAtcoderTaskDto | null;
 
   private activatedRoute: ActivatedRoute;
@@ -24,6 +26,7 @@ export class PageCooperationAtcoderContestKeyTaskKeyComponent implements OnInit 
 
   public constructor(activatedRoute: ActivatedRoute, cooperationAtcoderDomain: CooperationAtcoderDomain) {
     this.contest = null;
+    this.state = "initiated";
     this.task = null;
 
     this.activatedRoute = activatedRoute;
@@ -42,6 +45,8 @@ export class PageCooperationAtcoderContestKeyTaskKeyComponent implements OnInit 
     ).subscribe((value: [CooperationAtcoderContestDto | null, CooperationAtcoderTaskDto | null]): void => {
       this.contest = value[0];
       this.task = value[1];
+
+      this.state = (this.contest !== null && this.task !== null ? "loaded" : "notFound");
     });
   }
 

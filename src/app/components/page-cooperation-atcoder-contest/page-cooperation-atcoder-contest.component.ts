@@ -12,10 +12,13 @@ export class PageCooperationAtcoderContestComponent implements OnInit {
 
   public contestList: CooperationAtcoderContestDto[];
 
+  public state: "initiated" | "loaded";
+
   private cooperationAtcoderDomain: CooperationAtcoderDomain;
 
   public constructor(cooperationAtcoderDomain: CooperationAtcoderDomain) {
     this.contestList = [];
+    this.state = "initiated";
 
     this.cooperationAtcoderDomain = cooperationAtcoderDomain;
   }
@@ -23,6 +26,7 @@ export class PageCooperationAtcoderContestComponent implements OnInit {
   public ngOnInit(): void {
     this.cooperationAtcoderDomain.fetchContestList().subscribe((value: CooperationAtcoderContestDto[]): void => {
       this.contestList = value;
+      this.state = "loaded";
     });
   }
 

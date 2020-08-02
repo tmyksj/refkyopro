@@ -20,6 +20,8 @@ export class PageCooperationAtcoderContestKeyTaskKeyAcceptedComponent implements
 
   public languageList: LanguageItemDto[];
 
+  public state: "initiated" | "loaded" | "notFound";
+
   public task: CooperationAtcoderTaskDto | null;
 
   private activatedRoute: ActivatedRoute;
@@ -31,6 +33,7 @@ export class PageCooperationAtcoderContestKeyTaskKeyAcceptedComponent implements
   public constructor(activatedRoute: ActivatedRoute, cooperationAtcoderDomain: CooperationAtcoderDomain, languageDomain: LanguageDomain) {
     this.contest = null;
     this.languageList = null;
+    this.state = "initiated";
     this.task = null;
 
     this.activatedRoute = activatedRoute;
@@ -51,6 +54,8 @@ export class PageCooperationAtcoderContestKeyTaskKeyAcceptedComponent implements
       this.contest = value[0];
       this.languageList = value[1];
       this.task = value[2];
+
+      this.state = (this.contest !== null && this.languageList !== null && this.task !== null ? "loaded" : "notFound");
     });
   }
 

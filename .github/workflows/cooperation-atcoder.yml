@@ -1,0 +1,21 @@
+name: Cooperation CI (Atcoder)
+on: [push]
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: Update src/assets/cooperation-atcoder/index.json
+        run: |
+          cd lib/atcoder/
+
+          yarn install
+          yarn run ts-node src/generate-index-json.ts > ../../src/assets/cooperation-atcoder/index.json
+
+          cd ../../
+
+          git diff
+          cat src/assets/cooperation-atcoder/index.json

@@ -1,4 +1,4 @@
-name: Cooperation CI (Atcoder)
+name: Cooperation CI (AtCoder)
 on: [push]
 jobs:
   update:
@@ -13,7 +13,7 @@ jobs:
           cd lib/atcoder/
 
           yarn install
-          yarn run ts-node src/generate-index-json.ts > ../../src/assets/cooperation-atcoder/index.json
+          yarn run --silent ts-node src/generate-index-json.ts > ../../src/assets/cooperation-atcoder/index.json
 
           cd ../../
 

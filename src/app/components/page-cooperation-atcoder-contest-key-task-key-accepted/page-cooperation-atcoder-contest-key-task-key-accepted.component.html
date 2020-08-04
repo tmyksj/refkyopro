@@ -1,0 +1,27 @@
+<app-layout-main>
+  <app-part-container-main>
+    <ng-container *ngIf="state === 'initiated'">
+      <app-part-progress-spinner></app-part-progress-spinner>
+    </ng-container>
+
+    <ng-container *ngIf="state === 'loaded'">
+      <h1>Cooperation - AtCoder</h1>
+      <p>Accepted なプログラムをまとめました。</p>
+
+      <h2>{{ contest.name }} - {{ task.name }}</h2>
+
+      <h3>言語リスト</h3>
+      <ul>
+        <li *ngFor="let lang of languageList">
+          <a [routerLink]="'/cooperation/atcoder/contest/' + contest.key + '/' + task.key + '/accepted/' + lang.key">
+            <app-part-language [lang]="lang.key"></app-part-language>
+          </a>
+        </li>
+      </ul>
+    </ng-container>
+
+    <ng-container *ngIf="state === 'notFound'">
+      <app-part-message-center icon="pi pi-info-circle">コンテンツが見つかりませんでした。</app-part-message-center>
+    </ng-container>
+  </app-part-container-main>
+</app-layout-main>

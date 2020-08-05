@@ -11,7 +11,7 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: 14.x
-    - name: Update src/assets/cooperation-atcoder/index.json
+    - name: Update cooperation-atcoder
       run: |
         cd lib/atcoder/
 
@@ -26,8 +26,20 @@ jobs:
         git config --local committer.name "GitHub"
 
         git fetch
-        git pull origin master
+
+        branch_name=github-actions/cooperation-atcoder/$(date +%F)
+        git checkout -b ${branch_name}
 
         git add --all
         git commit --allow-empty --message "Auto-generated commit"
-        git push origin master
+        git push origin ${branch_name}
+
+        curl --request POST \
+          --url https://api.github.com/repos/${{ github.repository }}/pulls \
+          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          --header 'content-type: application/json' \
+          --data "{
+            \"title\": \"Update cooperation-atcoder ($(date +%F))\",
+            \"head\": \"${branch_name}\",
+            \"base\": \"master\"
+            }"

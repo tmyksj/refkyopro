@@ -7,27 +7,27 @@ jobs:
     if: ${{ github.ref == 'refs/heads/master' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14.x
-      - name: Update src/assets/cooperation-atcoder/index.json
-        run: |
-          cd lib/atcoder/
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    - name: Update src/assets/cooperation-atcoder/index.json
+      run: |
+        cd lib/atcoder/
 
-          yarn install
-          yarn run --silent ts-node src/generate-index-json.ts > ../../src/assets/cooperation-atcoder/index.json
+        yarn install
+        yarn run --silent ts-node src/generate-index-json.ts > ../../src/assets/cooperation-atcoder/index.json
 
-          cd ../../
+        cd ../../
 
-          git config --local author.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local author.name "github-actions[bot]"
-          git config --local committer.email "noreply@github.com"
-          git config --local committer.name "GitHub"
+        git config --local author.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local author.name "github-actions[bot]"
+        git config --local committer.email "noreply@github.com"
+        git config --local committer.name "GitHub"
 
-          git fetch
-          git pull origin master
+        git fetch
+        git pull origin master
 
-          git add --all
-          git commit --allow-empty --message "Auto-generated commit"
-          git push origin master
+        git add --all
+        git commit --allow-empty --message "Auto-generated commit"
+        git push origin master

@@ -1,7 +1,7 @@
 name: Cooperation CI (AtCoder)
 on:
   schedule:
-  - cron: '0 20 * * *'
+  - cron: '0 20 * * 0'
 jobs:
   update:
     if: ${{ github.ref == 'refs/heads/master' }}
@@ -31,7 +31,7 @@ jobs:
         git checkout -b ${branch_name}
 
         git add --all
-        git commit --allow-empty --message "Auto-generated commit"
+        git commit --allow-empty --message "[skip ci] Auto-generated commit"
         git push origin ${branch_name}
 
         curl --request POST \

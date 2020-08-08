@@ -7010,10 +7010,10 @@ primeng@^9.1.0:
   resolved "https://registry.yarnpkg.com/primeng/-/primeng-9.1.0.tgz#3d790f7d05b500ec77edf84899b6ef6ffb863c64"
   integrity sha512-EeW+WA7uT4/7UBJ23Gfb4x8MaTdFpeV9XxAy68K/XIoeTmZ2hNJrdVdfF63y6k7nxwA/mOrkIMshY0eM8nMzoQ==
 
-prismjs@^1.20.0:
-  version "1.20.0"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.20.0.tgz#9b685fc480a3514ee7198eac6a3bf5024319ff03"
-  integrity sha512-AEDjSrVNkynnw6A+B1DsFkd6AVdTnp+/WoUixFRULlCLZVRZlVQMVWio/16jv7G1FscUxQxOQhWwApgbnxr6kQ==
+prismjs@^1.21.0:
+  version "1.21.0"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.21.0.tgz#36c086ec36b45319ec4218ee164c110f9fc015a3"
+  integrity sha512-uGdSIu1nk3kej2iZsLyDoJ7e9bnPzIgY0naW/HdknGj61zScaprVEVGHrPoXqI+M9sP0NDnTK2jpkvmldpuqDw==
   optionalDependencies:
     clipboard "^2.0.0"
 

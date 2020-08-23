@@ -13,10 +13,11 @@ jobs:
         node-version: 14.x
     - name: Update cooperation-atcoder
       run: |
-        cd lib/atcoder/
+        cd support/atcoder/
 
         yarn install
-        yarn run --silent ts-node src/generate-index-json.ts > ../../src/assets/cooperation-atcoder/index.json
+        yarn run --silent ts-node src/generate-index-json.ts
+        yarn run --silent ts-node src/pull-accepted.ts
 
         cd ../../
 

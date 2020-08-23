@@ -1,3 +1,4 @@
+import { writeFileSync } from "fs";
 import { Builder, By, ThenableWebDriver, WebElement } from "selenium-webdriver";
 import { Options } from "selenium-webdriver/chrome";
 
@@ -89,5 +90,5 @@ import { CooperationAtcoderIndexDto } from "../../../src/app/domains/cooperation
     contestList: await scrapeContestList(),
   };
 
-  console.log(JSON.stringify(index));
+  writeFileSync("../../src/assets/cooperation-atcoder/index.json", JSON.stringify(index) + "\n");
 })();

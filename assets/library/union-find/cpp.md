@@ -80,10 +80,10 @@ public:
 
         if (r[ra] < r[rb]) {
             p[ra] = rb;
-            s[ra] = s[rb] = this->size(ra) + this->size(rb);
+            s[ra] = s[rb] = s[ra] + s[rb];
         } else {
             p[rb] = ra;
-            s[ra] = s[rb] = this->size(ra) + this->size(rb);
+            s[ra] = s[rb] = s[ra] + s[rb];
 
             if (r[ra] == r[rb]) {
                 r[ra]++;
